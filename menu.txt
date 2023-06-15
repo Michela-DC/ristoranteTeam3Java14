@@ -20,3 +20,12 @@ Menù Primi :
 -Gnocchi al pesto
 -Tagliatelle al ragù
 
+
+Menù Secondi:
+- Scaloppine al limone;
+- Arrosto di maiale;
+- Bistecca alla fiorentina;
+- Spezzatino di manzo;
+- Abbacchio alla romana;
+- Pollo alla cacciatora;
+
