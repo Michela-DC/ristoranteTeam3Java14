@@ -10,3 +10,13 @@ Bevande:
 - Fanta
 - Birra piccola/media/grande
 - Calice di vino
+
+
+Menù Primi :
+-Spaghetti alla carbonara
+-Risotto ai funghi porcini
+-Lasagne alla bolognese
+-Penne all'arrabbiata
+-Gnocchi al pesto
+-Tagliatelle al ragù
+
