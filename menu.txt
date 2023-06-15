@@ -1,0 +1,12 @@
+Ristorante Orsi Bruni
+
+Menù di Carne
+
+Bevande:
+- Acqua naturale
+- Acqua frizzante
+- Coca cola
+- Sprite
+- Fanta
+- Birra piccola/media/grande
+- Calice di vino
