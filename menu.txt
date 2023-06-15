@@ -29,3 +29,10 @@ Menù Secondi:
 - Abbacchio alla romana;
 - Pollo alla cacciatora;
 
+
+Menù Dessert:
+- Sorbetto al limone;
+- Tiramisù;
+- Panna cotta;
+- Cheesecake;
+
