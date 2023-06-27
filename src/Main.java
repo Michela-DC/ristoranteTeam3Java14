@@ -19,6 +19,14 @@ public class Main {
         menuSecondi.put("Abbacchio alla romana", new Piatto(16, "Carne di agnello da latte marinata con aglio, rosmarino, pepe nero\n e succo di limone cotta lentamente in padella"));
         menuSecondi.put("Pollo alla cacciatora", new Piatto(14, "Pollo allevato a terra \ncon  contorno di patate al forno"));
 
+        Map<String, Piatto> dessert = new HashMap<String, Piatto>();
+        dessert.put("Tiramisu", new Piatto(6, "Tiramisu con base di savoiardi e inzuppati nel caffè con amaretto e mascarpone"));
+        dessert.put("Panna cotta alla fragola", new Piatto(5, " Vasetto di  panna cotta con aggiunta fragole fresce e succo di fragole"));
+        dessert.put("Cheesecake al limone" , new Piatto(8,"Fetta di ceesecake con limoni di siracusa con base di biscotti"));
+        dessert.put("Sorbetto al limone", new Piatto(4,"Coppa di sorbetto con limoni di Siracusa"));
+
+        Piatto.printMenu(dessert);
+
 
 
 
