@@ -12,7 +12,7 @@ Bevande:
 - Calice di vino
 
 
-Menù Primi :
+Menù Primi:
 -Spaghetti alla carbonara
 -Risotto ai funghi porcini
 -Lasagne alla bolognese

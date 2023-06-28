@@ -1,16 +1,16 @@
 import java.util.Map;
 import java.util.TreeMap;
 
-public class Piatto {
-    int prezzo;
+public class MenuItem {
+    double prezzo;
     String descrizione;
 
-    public Piatto(int prezzo, String descrizione) {
+    public MenuItem(double prezzo, String descrizione) {
         this.prezzo = prezzo;
         this.descrizione = descrizione;
     }
 
-    public int getPrezzo(){
+    public double getPrezzo(){
         return prezzo;
     }
 
@@ -18,8 +18,16 @@ public class Piatto {
         return descrizione;
     }
 
-    public static void printMenu(Map<String, Piatto> piatti) {
-        TreeMap<String, Piatto> piattiOrdinati = new TreeMap<>(piatti);
+    public void setDescrizione(String descrizione) {
+        this.descrizione = descrizione;
+    }
+
+    public void setPrezzo(double prezzo) {
+        this.prezzo = prezzo;
+    }
+
+    public static void printMenu(Map<String, MenuItem> piatti) {
+        TreeMap<String, MenuItem> piattiOrdinati = new TreeMap<>(piatti);
 
         int maxChiaveLength = 0;
         for (String chiave : piattiOrdinati.keySet()) {
@@ -28,11 +36,11 @@ public class Piatto {
 
         String formatString = "%-" + (maxChiaveLength + 5) + "s%s";
 
-        for (Map.Entry<String, Piatto> entry : piattiOrdinati.entrySet()) {
+        for (Map.Entry<String, MenuItem> entry : piattiOrdinati.entrySet()) {
             String nomeDelPiatto = entry.getKey();
-            Piatto caratteristichePiatto = entry.getValue();
+            MenuItem caratteristichePiatto = entry.getValue();
             System.out.printf("-"+ formatString, nomeDelPiatto.toUpperCase() + ":   ", caratteristichePiatto.getPrezzo() + "€");
-            System.out.println("\n" + caratteristichePiatto.getDescrizione());
+            System.out.println("\n " + caratteristichePiatto.getDescrizione());
         }
     }
 }
