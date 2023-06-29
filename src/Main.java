@@ -1,8 +1,14 @@
+import java.sql.SQLOutput;
 import java.util.HashMap;
 import java.util.Map;
 
 public class Main {
     public static void main(String[] args) {
+        System.out.println("RISTORANTE GLI ORSI BRUNI");
+        System.out.println("Contemporary and classic italian cuicine");
+
+
+
         Map<String, MenuItem> menuPrimi = new HashMap<String, MenuItem>();
         menuPrimi.put("Spaghetti alla carbonara", new MenuItem(10, "Pasta condita con uova, pancetta, pecorino e pepe"));
         menuPrimi.put("Lasagne al Ragù", new MenuItem(15, "Strati di pasta, ragù di carne e besciamella"));
@@ -23,16 +29,16 @@ public class Main {
         dessert.put("Cheesecake al limone" , new MenuItem(8,"Fetta di ceesecake con limoni di siracusa con base di biscotti"));
         dessert.put("Sorbetto al limone", new MenuItem(4,"Coppa di sorbetto con limoni di Siracusa"));
 
-        Map<String, MenuItem> bevande = new HashMap<>();
+        Map<String, MenuItem> bevande = new HashMap<String, MenuItem>();
         bevande.put("Acqua Naturale", new MenuItem(3, "1l"));
         bevande.put("Acqua Frizzante", new MenuItem(3, "1l"));
-        bevande.put("Coca cola/Sprite/Fanta", new MenuItem(3.5, "lattina 33cl"));
-        bevande.put("Thé limone/pesca", new MenuItem(3.5, "lattina 33cl"));
+        bevande.put("Cocacola Sprite o Fanta", new MenuItem(3.5, "lattina 33cl"));
+        bevande.put("Thé limone o pesca", new MenuItem(3.5, "lattina 33cl"));
         bevande.put("Birra piccola", new MenuItem(4, "25cl, Alc %5,00"));
         bevande.put("Birra media", new MenuItem(6, "40cl, Alc %5,00"));
         bevande.put("Calice di vino", new MenuItem(5.5, "Alc %12,00"));
 
-        System.out.println("Primi piatti:");
+        System.out.println("\nPrimi piatti:");
         MenuItem.printMenu(menuPrimi);
         System.out.println("\nSecondi:");
         MenuItem.printMenu(menuSecondi);
