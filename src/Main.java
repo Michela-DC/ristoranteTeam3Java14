@@ -31,7 +31,6 @@ public class Main {
         Primi penneAllArrabbiata = new Primi("Penne all'arrabbiata" , 9.00,"Penne condite con salsa piccante al pomodoro, aglio, peperoncino e prezzemolo");
         Primi gnocchiAlPesto = new Primi("Gnocchi al pesto" , 8.50,"Gnocchi di patate freschi serviti con salsa al basilico, pinoli, parmigiano e olio d'oliva");
 
-
         List<Primi> sezionePrimi = new LinkedList<>();
         sezionePrimi.add(spaghettiAllaCarbonara);
         sezionePrimi.add(risottoAiFunghi);
@@ -39,31 +38,12 @@ public class Main {
         sezionePrimi.add(penneAllArrabbiata);
         sezionePrimi.add(gnocchiAlPesto);
 
-
-        for (Primi primi : sezionePrimi) {
-            System.out.println("- " + primi.getName().toUpperCase() + " " + primi.getPrice() + "€");
-            System.out.println(primi.getDescription());
-        }
-
-        System.out.println("\n \n \n");
-
-//        for ( int i=0 ; i<sezionePrimi.size(); i++){
-//            System.out.println(sezionePrimi.get(i));
-//        }
-
         List<Secondi> secondiList = new ArrayList<Secondi>();
         secondiList.add(scaloppineAlLimone);
         secondiList.add(arrostoDiMaiale);
         secondiList.add(bisteccaAllaFiorentina);
         secondiList.add(abbacchioAllaRomana);
         secondiList.add(polloAllaCacciatora);
-
-        for (Secondi secondi : secondiList) {
-            System.out.println("- " + secondi.getDishName().toUpperCase() + " " + secondi.getDishPrice() + "€");
-            System.out.println(secondi.getDishDescription() + ";");
-        }
-
-           System.out.println("\n\n\n");
 
         List<Bevanda> listaBevande = new ArrayList<>();
         listaBevande.add(acquaNaturale);
@@ -76,13 +56,32 @@ public class Main {
         listaBevande.add(birraMedia);
         listaBevande.add(caliceVino);
 
+        System.out.println("RISTORANTE GLI ORSI BRUNI");
+        System.out.println("Contemporary and classic italian cuicine");
+        System.out.println(" ");
+
+        for (Primi primi : sezionePrimi) {
+            System.out.println("- " + primi.getName().toUpperCase() + " " + primi.getPrice() + "€");
+            System.out.println(primi.getDescription());
+        }
+
+//        for ( int i=0 ; i<sezionePrimi.size(); i++){
+//            System.out.println(sezionePrimi.get(i));
+//        }
+
+        System.out.println("\n \n \n");
+
+        for (Secondi secondi : secondiList) {
+            System.out.println("- " + secondi.getDishName().toUpperCase() + " " + secondi.getDishPrice() + "€");
+            System.out.println(secondi.getDishDescription() + ";");
+        }
+
+        System.out.println("\n\n\n");
+
         for (Bevanda drink : listaBevande) {
             System.out.println("- " + drink.getNome().toUpperCase() + " " + drink.getPrezzo() + "€");
             System.out.println("  " + drink.getDescrizione());
         }
-
-
-
     }
-    }
+}
 
