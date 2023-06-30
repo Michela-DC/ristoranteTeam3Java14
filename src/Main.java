@@ -1,51 +1,36 @@
-import java.sql.SQLOutput;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
         System.out.println("RISTORANTE GLI ORSI BRUNI");
         System.out.println("Contemporary and classic italian cuicine");
 
+        Bevanda acquaNaturale = new Bevanda("Acqua naturale", 3, "1l");
+        Bevanda acquaFrizzante = new Bevanda("Acqua frizzante", 3, "1l");
+        Bevanda cocaCola = new Bevanda("Coca Cola", 3.5, "lattina 33cl");
+        Bevanda sprite = new Bevanda("Sprite", 3.5, "lattina 33cl");
+        Bevanda fanta = new Bevanda("Fanta", 3.5, "lattina 33cl");
+        Bevanda theLimone = new Bevanda("Thé al limone", 3.5, "lattina 33cl");
+        Bevanda birraPiccola = new Bevanda("Birra piccola", 4, "25cl, Alc %5,00");
+        Bevanda birraMedia = new Bevanda("Birra media", 6, "40cl, Alc %5,00");
+        Bevanda caliceVino = new Bevanda("Calice di vino", 5.50, "Alc %12,00");
 
+        List<Bevanda> listaBevande = new ArrayList<>();
+        listaBevande.add(acquaNaturale);
+        listaBevande.add(acquaFrizzante);
+        listaBevande.add(cocaCola);
+        listaBevande.add(sprite);
+        listaBevande.add(fanta);
+        listaBevande.add(theLimone);
+        listaBevande.add(birraPiccola);
+        listaBevande.add(birraMedia);
+        listaBevande.add(caliceVino);
 
-        Map<String, MenuItem> menuPrimi = new HashMap<String, MenuItem>();
-        menuPrimi.put("Spaghetti alla carbonara", new MenuItem(10, "Pasta condita con uova, pancetta, pecorino e pepe"));
-        menuPrimi.put("Lasagne al Ragù", new MenuItem(15, "Strati di pasta, ragù di carne e besciamella"));
-        menuPrimi.put("Penne all'Arrabbiata", new MenuItem(11, "Pasta condita con salsa di pomodoro, peperoncino e aglio"));
-        menuPrimi.put("Risotto ai Funghi", new MenuItem(15, "Riso cotto lentamente con funghi porcini e brodo"));
-        menuPrimi.put("Gnocchi al Pesto", new MenuItem(8, "Gnocchi di patate conditi con pesto alla genovese"));
-
-        Map<String, MenuItem> menuSecondi = new HashMap<String, MenuItem>();
-        menuSecondi.put("Scaloppine al limone", new MenuItem(12, "Fettine di vitello  battute e poi cotte in padella \ncon succo di limone, burro e prezzemolo"));
-        menuSecondi.put("Arrosto di maiale", new MenuItem(11, "Arrosto di delizioso filetto di maialino nero"));
-        menuSecondi.put("Bistecca alla fiorentina", new MenuItem(24, "Bistecca di carne marchigiana con taglio da fiorentina"));
-        menuSecondi.put("Abbacchio alla romana", new MenuItem(16, "Carne di agnello da latte marinata con aglio, rosmarino, pepe nero\n e succo di limone cotta lentamente in padella"));
-        menuSecondi.put("Pollo alla cacciatora", new MenuItem(14, "Pollo allevato a terra \ncon  contorno di patate al forno"));
-
-        Map<String, MenuItem> dessert = new HashMap<String, MenuItem>();
-        dessert.put("Tiramisu", new MenuItem(6, "Tiramisu con base di savoiardi e inzuppati nel caffè con amaretto e mascarpone"));
-        dessert.put("Panna cotta alla fragola", new MenuItem(5, "Vasetto di  panna cotta con aggiunta fragole fresce e succo di fragole"));
-        dessert.put("Cheesecake al limone" , new MenuItem(8,"Fetta di ceesecake con limoni di siracusa con base di biscotti"));
-        dessert.put("Sorbetto al limone", new MenuItem(4,"Coppa di sorbetto con limoni di Siracusa"));
-
-        Map<String, MenuItem> bevande = new HashMap<String, MenuItem>();
-        bevande.put("Acqua Naturale", new MenuItem(3, "1l"));
-        bevande.put("Acqua Frizzante", new MenuItem(3, "1l"));
-        bevande.put("Cocacola Sprite o Fanta", new MenuItem(3.5, "lattina 33cl"));
-        bevande.put("Thé limone o pesca", new MenuItem(3.5, "lattina 33cl"));
-        bevande.put("Birra piccola", new MenuItem(4, "25cl, Alc %5,00"));
-        bevande.put("Birra media", new MenuItem(6, "40cl, Alc %5,00"));
-        bevande.put("Calice di vino", new MenuItem(5.5, "Alc %12,00"));
-
-        System.out.println("\nPrimi piatti:");
-        MenuItem.printMenu(menuPrimi);
-        System.out.println("\nSecondi:");
-        MenuItem.printMenu(menuSecondi);
-        System.out.println("\nDessert:");
-        MenuItem.printMenu(dessert);
-        System.out.println("\nBevande:");
-        MenuItem.printMenu(bevande);
+        for(Bevanda drink : listaBevande) {
+            System.out.println("- " + drink.getNome().toUpperCase() + " " + drink.getPrezzo() + "€");
+            System.out.println("  " + drink.getDescrizione());
+        }
     }
 }
 
