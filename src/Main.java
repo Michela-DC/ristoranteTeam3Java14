@@ -25,6 +25,32 @@ public class Main {
         Bevanda birraMedia = new Bevanda("Birra media", 6, "40cl, Alc %5,00");
         Bevanda caliceVino = new Bevanda("Calice di vino", 5.50, "Alc %12,00");
 
+        Primi spaghettiAllaCarbonara = new Primi("Spaghetti alla carbonara" , 10.50,"Spaghetti conditi con uova, pancetta, pecorino romano e pepe nero");
+        Primi risottoAiFunghi = new Primi("Risotto ai funghi" , 12.50,"Risotto cremoso preparato con funghi porcini freschi e parmigiano reggiano");
+        Primi lasagneAlRagu = new Primi("Lasagne al ragù" , 12.00,"Strati di pasta all'uovo, ragù di carne, besciamella e formaggio gratinato");
+        Primi penneAllArrabbiata = new Primi("Penne all'arrabbiata" , 9.00,"Penne condite con salsa piccante al pomodoro, aglio, peperoncino e prezzemolo");
+        Primi gnocchiAlPesto = new Primi("Gnocchi al pesto" , 8.50,"Gnocchi di patate freschi serviti con salsa al basilico, pinoli, parmigiano e olio d'oliva");
+
+
+        List<Primi> sezionePrimi = new LinkedList<>();
+        sezionePrimi.add(spaghettiAllaCarbonara);
+        sezionePrimi.add(risottoAiFunghi);
+        sezionePrimi.add(lasagneAlRagu);
+        sezionePrimi.add(penneAllArrabbiata);
+        sezionePrimi.add(gnocchiAlPesto);
+
+
+        for (Primi primi : sezionePrimi) {
+            System.out.println("- " + primi.getName().toUpperCase() + " " + primi.getPrice() + "€");
+            System.out.println(primi.getDescription());
+        }
+
+        System.out.println("\n \n \n");
+
+//        for ( int i=0 ; i<sezionePrimi.size(); i++){
+//            System.out.println(sezionePrimi.get(i));
+//        }
+
         List<Secondi> secondiList = new ArrayList<Secondi>();
         secondiList.add(scaloppineAlLimone);
         secondiList.add(arrostoDiMaiale);
@@ -55,29 +81,7 @@ public class Main {
             System.out.println("  " + drink.getDescrizione());
         }
 
-        Primi spaghettiAllaCarbonara = new Primi("Spaghetti alla carbonara" , 10.50,"Spaghetti conditi con uova, pancetta, pecorino romano e pepe nero");
-        Primi risottoAiFunghi = new Primi("Risotto ai funghi" , 12.50,"Risotto cremoso preparato con funghi porcini freschi e parmigiano reggiano");
-        Primi lasagneAlRagu = new Primi("Lasagne al ragù" , 12.00,"Strati di pasta all'uovo, ragù di carne, besciamella e formaggio gratinato");
-        Primi penneAllArrabbiata = new Primi("Penne all'arrabbiata" , 9.00,"Penne condite con salsa piccante al pomodoro, aglio, peperoncino e prezzemolo");
-        Primi gnocchiAlPesto = new Primi("Gnocchi al pesto" , 8.50,"Gnocchi di patate freschi serviti con salsa al basilico, pinoli, parmigiano e olio d'oliva");
 
-
-        List<Primi> sezionePrimi = new LinkedList<>();
-        sezionePrimi.add(spaghettiAllaCarbonara);
-        sezionePrimi.add(risottoAiFunghi);
-        sezionePrimi.add(lasagneAlRagu);
-        sezionePrimi.add(penneAllArrabbiata);
-        sezionePrimi.add(gnocchiAlPesto);
-
-
-        for (Primi primi : sezionePrimi) {
-            System.out.println("- " + primi.getName().toUpperCase() + " " + primi.getPrice() + "€");
-            System.out.println(primi.getDescription());
-        }
-
-//        for ( int i=0 ; i<sezionePrimi.size(); i++){
-//            System.out.println(sezionePrimi.get(i));
-//        }
 
     }
     }
