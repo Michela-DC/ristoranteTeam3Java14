@@ -57,7 +57,7 @@ public class Main {
         listaBevande.add(caliceVino);
 
         System.out.println("RISTORANTE GLI ORSI BRUNI");
-        System.out.println("Contemporary and classic italian cuicine");
+        System.out.println("Contemporary and classic italian cuisine");
 
         System.out.println("\n\nPrimi piatti:");
         for (Primi primi : sezionePrimi) {
