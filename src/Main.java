@@ -58,8 +58,8 @@ public class Main {
 
         System.out.println("RISTORANTE GLI ORSI BRUNI");
         System.out.println("Contemporary and classic italian cuicine");
-        System.out.println(" ");
 
+        System.out.println("\n\nPrimi piatti:");
         for (Primi primi : sezionePrimi) {
             System.out.println("- " + primi.getName().toUpperCase() + " " + primi.getPrice() + "€");
             System.out.println(primi.getDescription());
@@ -69,7 +69,8 @@ public class Main {
 //            System.out.println(sezionePrimi.get(i));
 //        }
 
-        System.out.println("\n \n \n");
+        System.out.println("\n\n\n");
+        System.out.println("Secondi:");
 
         for (Secondi secondi : secondiList) {
             System.out.println("- " + secondi.getDishName().toUpperCase() + " " + secondi.getDishPrice() + "€");
@@ -77,10 +78,11 @@ public class Main {
         }
 
         System.out.println("\n\n\n");
+        System.out.println("Bevande:");
 
         for (Bevanda drink : listaBevande) {
-            System.out.println("- " + drink.getNome().toUpperCase() + " " + drink.getPrezzo() + "€");
-            System.out.println("  " + drink.getDescrizione());
+            System.out.println("- " + drink.getName().toUpperCase() + " " + drink.getPrice() + "€");
+            System.out.println("  " + drink.getDescription());
         }
     }
 }

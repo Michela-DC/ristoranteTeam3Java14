@@ -1,35 +1,36 @@
 public class Bevanda {
-    String nome;
-    double prezzo;
-    String descrizione;
+    private String name;
+    private double price;
+    private String description;
 
-    public Bevanda(String nome, double prezzo, String descrizione) {
-        this.nome = nome;
-        this.prezzo = prezzo;
-        this.descrizione = descrizione;
+    public Bevanda(String name, double price, String description) {
+        this.name = name;
+        this.price = price;
+        this.description = description;
     }
 
-    public String getNome() {
-        return nome;
+    public String getName() {
+        return name;
     }
 
-    public double getPrezzo() {
-        return prezzo;
+    public double getPrice() {
+        return price;
     }
 
-    public String getDescrizione() {
-        return descrizione;
+    public String getDescription() {
+        return description;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public void setPrezzo(double prezzo) {
-        this.prezzo = prezzo;
+    public void setPrice(double price) {
+        this.price = price;
     }
 
-    public void setDescrizione(String descrizione) {
-        this.descrizione = descrizione;
+    public void setDescription(String description) {
+        this.description = description;
     }
 }
+
