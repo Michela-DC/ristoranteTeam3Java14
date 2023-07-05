@@ -31,6 +31,11 @@ public class Main {
         Primi penneAllArrabbiata = new Primi("Penne all'arrabbiata" , 9.00,"Penne condite con salsa piccante al pomodoro, aglio, peperoncino e prezzemolo");
         Primi gnocchiAlPesto = new Primi("Gnocchi al pesto" , 8.50,"Gnocchi di patate freschi serviti con salsa al basilico, pinoli, parmigiano e olio d'oliva");
 
+        Dessert sorbettoAlLimone = new Dessert("Sorbetto al limone", 5, "Coppa di sorbetto con limoni freschi di Siracusa igp");
+        Dessert tiramisù = new Dessert("Tiramisù", 6, "Fetta di tiramisù con mascarpone, savoiardi,caffè e amaretto di Saronno");
+        Dessert pannaCotta = new Dessert("Panna Cotta", 4.50, "Panna cotta con succo di fragole fresche frullate");
+        Dessert cheescake = new Dessert("Cheescake al Pistacchio", 8.90, "Fetta di Cheescake al pistacchio di Bronte con base di biscotti");
+
         List<Primi> sezionePrimi = new LinkedList<>();
         sezionePrimi.add(spaghettiAllaCarbonara);
         sezionePrimi.add(risottoAiFunghi);
@@ -55,6 +60,12 @@ public class Main {
         listaBevande.add(birraPiccola);
         listaBevande.add(birraMedia);
         listaBevande.add(caliceVino);
+
+        List<Dessert> dessertList = new ArrayList<>();
+        dessertList.add(sorbettoAlLimone);
+        dessertList.add(tiramisù);
+        dessertList.add(pannaCotta);
+        dessertList.add(cheescake);
 
         System.out.println("RISTORANTE GLI ORSI BRUNI");
         System.out.println("Contemporary and classic italian cuisine");
@@ -83,6 +94,14 @@ public class Main {
         for (Bevanda drink : listaBevande) {
             System.out.println("- " + drink.getName().toUpperCase() + " " + drink.getPrice() + "€");
             System.out.println("  " + drink.getDescription());
+        }
+
+        System.out.println("\n\n\n");
+        System.out.println("Dessert");
+        for (Dessert dessert : dessertList){
+            System.out.println("- " + dessert.getName().toUpperCase() + " " + dessert.getPrice() + "€");
+            System.out.println(" " + dessert.getDescription());
+
         }
     }
 }
