@@ -1,19 +1,44 @@
-
-import java.sql.Array;
-import java.util.*;
-
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.List;
-
-
 public class Main {
     public static void main(String[] args) {
-        Secondi scaloppineAlLimone = new Secondi("Scaloppine al limone", 12, "Fettine di vitello  battute e poi cotte in padella con succo di limone, burro e prezzemolo");
-        Secondi arrostoDiMaiale = new Secondi("Arrosto di maiale", 14, "Arrosto di delizioso filetto di maialino nero");
-        Secondi bisteccaAllaFiorentina = new Secondi("Bistecca alla fiorentina", 24, "Bistecca di carne marchigiana con taglio da fiorentina");
-        Secondi abbacchioAllaRomana = new Secondi("Abbacchio alla romana", 16, "Carne di agnello da latte marinata con aglio, rosmarino, pepe nero e succo di limone cotta lentamente in padella");
-        Secondi polloAllaCacciatora = new Secondi("Pollo alla cacciatora", 14, "Pollo allevato a terra con  contorno di patate al forno");
+        System.out.println("RISTORANTE GLI ORSI BRUNI");
+        System.out.println("Contemporary and classic italian cuisine");
+        System.out.println("\n");
+
+        Menu menu = new Menu();
+
+        PrimoPiatto spaghettiAllaCarbonara = new PrimoPiatto("Spaghetti alla carbonara" , 10.50,"Spaghetti conditi con uova, pancetta, pecorino romano e pepe nero");
+        PrimoPiatto risottoAiFunghi = new PrimoPiatto("Risotto ai funghi" , 12.50,"Risotto cremoso preparato con funghi porcini freschi e parmigiano reggiano");
+        PrimoPiatto lasagneAlRagu = new PrimoPiatto("Lasagne al ragù" , 12.00,"Strati di pasta all'uovo, ragù di carne, besciamella e formaggio gratinato");
+        PrimoPiatto penneAllArrabbiata = new PrimoPiatto("Penne all'arrabbiata" , 9.00,"Penne condite con salsa piccante al pomodoro, aglio, peperoncino e prezzemolo");
+        PrimoPiatto gnocchiAlPesto = new PrimoPiatto("Gnocchi al pesto" , 8.50,"Gnocchi di patate freschi serviti con salsa al basilico, pinoli, parmigiano e olio d'oliva");
+
+        menu.aggiungiPrimoPiatto(spaghettiAllaCarbonara);
+        menu.aggiungiPrimoPiatto(risottoAiFunghi);
+        menu.aggiungiPrimoPiatto(lasagneAlRagu);
+        menu.aggiungiPrimoPiatto(penneAllArrabbiata);
+        menu.aggiungiPrimoPiatto(gnocchiAlPesto);
+
+        SecondoPiatto scaloppineAlLimone = new SecondoPiatto("Scaloppine al limone", 12, "Fettine di vitello  battute e poi cotte in padella con succo di limone, burro e prezzemolo");
+        SecondoPiatto arrostoDiMaiale = new SecondoPiatto("Arrosto di maiale", 14, "Arrosto di delizioso filetto di maialino nero");
+        SecondoPiatto bisteccaAllaFiorentina = new SecondoPiatto("Bistecca alla fiorentina", 24, "Bistecca di carne marchigiana con taglio da fiorentina");
+        SecondoPiatto abbacchioAllaRomana = new SecondoPiatto("Abbacchio alla romana", 16, "Carne di agnello da latte marinata con aglio, rosmarino, pepe nero e succo di limone cotta lentamente in padella");
+        SecondoPiatto polloAllaCacciatora = new SecondoPiatto("Pollo alla cacciatora", 14, "Pollo allevato a terra con  contorno di patate al forno");
+
+        menu.aggiungiSecondoPiatto(scaloppineAlLimone);
+        menu.aggiungiSecondoPiatto(arrostoDiMaiale);
+        menu.aggiungiSecondoPiatto(bisteccaAllaFiorentina);
+        menu.aggiungiSecondoPiatto(abbacchioAllaRomana);
+        menu.aggiungiSecondoPiatto(polloAllaCacciatora);
+
+        Dessert sorbettoAlLimone = new Dessert("Sorbetto al limone", 5, "Coppa di sorbetto con limoni freschi di Siracusa igp");
+        Dessert tiramisu= new Dessert("Tiramisù", 6, "Fetta di tiramisù con mascarpone, savoiardi,caffè e amaretto di Saronno");
+        Dessert pannaCotta = new Dessert("Panna Cotta", 4.50, "Panna cotta con succo di fragole fresche frullate");
+        Dessert cheescake = new Dessert("Cheescake al Pistacchio", 8.90, "Fetta di Cheescake al pistacchio di Bronte con base di biscotti");
+
+        menu.aggiungiDessert(sorbettoAlLimone);
+        menu.aggiungiDessert(tiramisu);
+        menu.aggiungiDessert(pannaCotta);
+        menu.aggiungiDessert(cheescake);
 
         Bevanda acquaNaturale = new Bevanda("Acqua naturale", 3, "1l");
         Bevanda acquaFrizzante = new Bevanda("Acqua frizzante", 3, "1l");
@@ -25,84 +50,23 @@ public class Main {
         Bevanda birraMedia = new Bevanda("Birra media", 6, "40cl, Alc %5,00");
         Bevanda caliceVino = new Bevanda("Calice di vino", 5.50, "Alc %12,00");
 
-        Primi spaghettiAllaCarbonara = new Primi("Spaghetti alla carbonara" , 10.50,"Spaghetti conditi con uova, pancetta, pecorino romano e pepe nero");
-        Primi risottoAiFunghi = new Primi("Risotto ai funghi" , 12.50,"Risotto cremoso preparato con funghi porcini freschi e parmigiano reggiano");
-        Primi lasagneAlRagu = new Primi("Lasagne al ragù" , 12.00,"Strati di pasta all'uovo, ragù di carne, besciamella e formaggio gratinato");
-        Primi penneAllArrabbiata = new Primi("Penne all'arrabbiata" , 9.00,"Penne condite con salsa piccante al pomodoro, aglio, peperoncino e prezzemolo");
-        Primi gnocchiAlPesto = new Primi("Gnocchi al pesto" , 8.50,"Gnocchi di patate freschi serviti con salsa al basilico, pinoli, parmigiano e olio d'oliva");
+        menu.aggiungiBevanda(acquaNaturale);
+        menu.aggiungiBevanda(acquaFrizzante);
+        menu.aggiungiBevanda(cocaCola);
+        menu.aggiungiBevanda(sprite);
+        menu.aggiungiBevanda(fanta);
+        menu.aggiungiBevanda(theLimone);
+        menu.aggiungiBevanda(birraPiccola);
+        menu.aggiungiBevanda(birraMedia);
+        menu.aggiungiBevanda(caliceVino);
 
-        Dessert sorbettoAlLimone = new Dessert("Sorbetto al limone", 5, "Coppa di sorbetto con limoni freschi di Siracusa igp");
-        Dessert tiramisù = new Dessert("Tiramisù", 6, "Fetta di tiramisù con mascarpone, savoiardi,caffè e amaretto di Saronno");
-        Dessert pannaCotta = new Dessert("Panna Cotta", 4.50, "Panna cotta con succo di fragole fresche frullate");
-        Dessert cheescake = new Dessert("Cheescake al Pistacchio", 8.90, "Fetta di Cheescake al pistacchio di Bronte con base di biscotti");
+        menu.stampaPrimiPiatti();
+        System.out.println("\n");
+        menu.stampaSecondiPiatti();
+        System.out.println("\n");
+        menu.stampaDessert();
+        System.out.println("\n");
+        menu.stampaBevande();
 
-        List<Primi> sezionePrimi = new LinkedList<>();
-        sezionePrimi.add(spaghettiAllaCarbonara);
-        sezionePrimi.add(risottoAiFunghi);
-        sezionePrimi.add(lasagneAlRagu);
-        sezionePrimi.add(penneAllArrabbiata);
-        sezionePrimi.add(gnocchiAlPesto);
-
-        List<Secondi> secondiList = new ArrayList<Secondi>();
-        secondiList.add(scaloppineAlLimone);
-        secondiList.add(arrostoDiMaiale);
-        secondiList.add(bisteccaAllaFiorentina);
-        secondiList.add(abbacchioAllaRomana);
-        secondiList.add(polloAllaCacciatora);
-
-        List<Bevanda> listaBevande = new ArrayList<>();
-        listaBevande.add(acquaNaturale);
-        listaBevande.add(acquaFrizzante);
-        listaBevande.add(cocaCola);
-        listaBevande.add(sprite);
-        listaBevande.add(fanta);
-        listaBevande.add(theLimone);
-        listaBevande.add(birraPiccola);
-        listaBevande.add(birraMedia);
-        listaBevande.add(caliceVino);
-
-        List<Dessert> dessertList = new ArrayList<>();
-        dessertList.add(sorbettoAlLimone);
-        dessertList.add(tiramisù);
-        dessertList.add(pannaCotta);
-        dessertList.add(cheescake);
-
-        System.out.println("RISTORANTE GLI ORSI BRUNI");
-        System.out.println("Contemporary and classic italian cuisine");
-
-        System.out.println("\n\nPrimi piatti:");
-        for (Primi primi : sezionePrimi) {
-            System.out.println("- " + primi.getName().toUpperCase() + " " + primi.getPrice() + "€");
-            System.out.println(primi.getDescription());
-        }
-
-//        for ( int i=0 ; i<sezionePrimi.size(); i++){
-//            System.out.println(sezionePrimi.get(i));
-//        }
-
-        System.out.println("\n\n\n");
-        System.out.println("Secondi:");
-
-        for (Secondi secondi : secondiList) {
-            System.out.println("- " + secondi.getDishName().toUpperCase() + " " + secondi.getDishPrice() + "€");
-            System.out.println(secondi.getDishDescription() + ";");
-        }
-
-        System.out.println("\n\n\n");
-        System.out.println("Bevande:");
-
-        for (Bevanda drink : listaBevande) {
-            System.out.println("- " + drink.getName().toUpperCase() + " " + drink.getPrice() + "€");
-            System.out.println("  " + drink.getDescription());
-        }
-
-        System.out.println("\n\n\n");
-        System.out.println("Dessert");
-        for (Dessert dessert : dessertList){
-            System.out.println("- " + dessert.getName().toUpperCase() + " " + dessert.getPrice() + "€");
-            System.out.println(" " + dessert.getDescription());
-
-        }
     }
 }
-

@@ -12,7 +12,7 @@ Bevande:
 - Calice di vino
 
 
-Menù Primi:
+Menù PrimoPiatto:
 -Spaghetti alla carbonara
 -Risotto ai funghi porcini
 -Lasagne alla bolognese
@@ -21,7 +21,7 @@ Menù Primi:
 -Tagliatelle al ragù
 
 
-Menù Secondi:
+Menù SecondoPiatto:
 - Scaloppine al limone;
 - Arrosto di maiale;
 - Bistecca alla fiorentina;

@@ -1,9 +1,10 @@
-public class Dessert {
+public class PrimoPiatto {
     private String name;
     private double price;
     private String description;
 
-    public Dessert(String name, double price, String description) {
+
+    public PrimoPiatto(String name, double price, String description) {
         this.name = name;
         this.price = price;
         this.description = description;
@@ -38,3 +39,4 @@ public class Dessert {
         return name.toUpperCase() +" "+ price +"\n"+ description ;
     }
 }
+

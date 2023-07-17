@@ -1,8 +1,14 @@
-public class Primi {
+public class SecondoPiatto {
+
     private String name;
     private double price;
     private String description;
 
+    public SecondoPiatto(String name, double price, String description) {
+        this.name = name;
+        this.price = price;
+        this.description = description;
+    }
 
     public String getName() {
         return name;
@@ -28,15 +34,8 @@ public class Primi {
         this.description = description;
     }
 
-    public Primi ( String name , double price , String description ){
-        this.name=name;
-        this.price=price;
-        this.description=description;
+    @Override
+    public String toString() {
+        return name.toUpperCase() +" "+ price +"\n"+ description ;
     }
-
-//    @Override
-//    public String toString() {
-//        return  name.toUpperCase() + "  " + price + "€" +"\n" + description ;
-//    }
 }
-
