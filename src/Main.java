@@ -2,11 +2,9 @@ public class Main {
     public static void main(String[] args) {
 
         //TODO spostare in menu
-        System.out.println("RISTORANTE GLI ORSI BRUNI");
-        System.out.println("Contemporary and classic italian cuisine");
         System.out.println("\n");
 
-        Menu menu = new Menu();
+        Menu menu = new Menu("RISTORANTE GLI ORSI BRUNI", "Contemporary and classic italian cuisine");
 
         PrimoPiatto spaghettiAllaCarbonara = new PrimoPiatto("Spaghetti alla carbonara" , 10.50,"Spaghetti conditi con uova, pancetta, pecorino romano e pepe nero");
         PrimoPiatto risottoAiFunghi = new PrimoPiatto("Risotto ai funghi" , 12.50,"Risotto cremoso preparato con funghi porcini freschi e parmigiano reggiano");
@@ -42,7 +40,7 @@ public class Main {
         menu.aggiungiDessert(pannaCotta);
         menu.aggiungiDessert(cheescake);
 
-        Portata acquaNaturale = new Bevanda("Acqua naturale", 3, "1l");
+        Bevanda acquaNaturale = new Bevanda("Acqua naturale", 3, "1l");
         Bevanda acquaFrizzante = new Bevanda("Acqua frizzante", 3, "1l");
         Bevanda cocaCola = new Bevanda("Coca Cola", 3.5, "lattina 33cl");
         Bevanda sprite = new Bevanda("Sprite", 3.5, "lattina 33cl");
@@ -70,6 +68,5 @@ public class Main {
         menu.stampaDessert();
         System.out.println("\n");
         menu.stampaBevande();
-
     }
 }

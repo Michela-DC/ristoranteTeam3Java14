@@ -4,16 +4,36 @@ import java.util.List;
 public class Menu {
 
     //TODO inseriri i campi per il menù, titolo descr tipo
+    private String title;
+    private String description;
     private List<PrimoPiatto> primiPiatti;
     private List<SecondoPiatto> secondiPiatti;
     private List<Dessert> dessert;
     private List<Bevanda> bevande;
 
-    public Menu() {
+    public Menu(String title, String description) {
+        this.title = title;
+        this.description = description;
         primiPiatti = new ArrayList<>();
         secondiPiatti = new ArrayList<>();
         dessert = new ArrayList<>();
         bevande = new ArrayList<>();
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     public void aggiungiPrimoPiatto(PrimoPiatto primoPiatto) {
