@@ -1,5 +1,7 @@
 public class Main {
     public static void main(String[] args) {
+
+        //TODO spostare in menu
         System.out.println("RISTORANTE GLI ORSI BRUNI");
         System.out.println("Contemporary and classic italian cuisine");
         System.out.println("\n");
@@ -40,7 +42,7 @@ public class Main {
         menu.aggiungiDessert(pannaCotta);
         menu.aggiungiDessert(cheescake);
 
-        Bevanda acquaNaturale = new Bevanda("Acqua naturale", 3, "1l");
+        Portata acquaNaturale = new Bevanda("Acqua naturale", 3, "1l");
         Bevanda acquaFrizzante = new Bevanda("Acqua frizzante", 3, "1l");
         Bevanda cocaCola = new Bevanda("Coca Cola", 3.5, "lattina 33cl");
         Bevanda sprite = new Bevanda("Sprite", 3.5, "lattina 33cl");
@@ -60,6 +62,7 @@ public class Main {
         menu.aggiungiBevanda(birraMedia);
         menu.aggiungiBevanda(caliceVino);
 
+        //TODO spostare in un solo metodo
         menu.stampaPrimiPiatti();
         System.out.println("\n");
         menu.stampaSecondiPiatti();

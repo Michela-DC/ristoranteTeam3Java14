@@ -2,6 +2,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Menu {
+
+    //TODO inseriri i campi per il menù, titolo descr tipo
     private List<PrimoPiatto> primiPiatti;
     private List<SecondoPiatto> secondiPiatti;
     private List<Dessert> dessert;
@@ -29,6 +31,8 @@ public class Menu {
     public void aggiungiBevanda(Bevanda bevanda) {
         bevande.add(bevanda);
     }
+
+    //TODO fare un metodo che stampa tutto il menu
 
     public void stampaPrimiPiatti() {
         System.out.println("PRIMI PIATTI:");

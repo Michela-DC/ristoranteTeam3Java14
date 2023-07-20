@@ -1,4 +1,7 @@
 public class Bevanda {
+
+
+    //TODO abbiamo su tutte le classi campi uguali, fare una classe padre e poi ognugno di voi inserisce dei campi in più persolazzati sulle vostre classi
     private String name;
     private double price;
     private String description;
@@ -33,6 +36,7 @@ public class Bevanda {
         this.description = description;
     }
 
+    //TODO avevamo detto che serviva il metodo print che stampava le info dell'oggetto
     @Override
     public String toString() {
         return name.toUpperCase() +" "+ price +"\n"+ description ;
