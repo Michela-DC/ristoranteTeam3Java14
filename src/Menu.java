@@ -17,6 +17,10 @@ public class Menu {
         listaPortate.add(portata);
     }
 
+    public void rimuoviPortata(Portata portata) {
+        listaPortate.remove(portata);
+    }
+
     public void stampaPortate() {
         int conta = 0;
         System.out.println(title + "\n"+description+"\n" );
