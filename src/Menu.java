@@ -21,6 +21,7 @@ public class Menu {
         listaPortate.remove(portata);
     }
 
+
     public void stampaPortate() {
         int conta = 0;
         System.out.println(title + "\n"+description+"\n" );
@@ -43,24 +44,21 @@ public class Menu {
 
             if (portata.getAllergeni().isEmpty()){
                 System.out.println(ColorEnum.YELLOW.getAnsiCode() + "Allergeni: " + ColorEnum.RED.getAnsiCode() + "Non ci sono allergeni"+ "\n");
-            }else {System.out.print(ColorEnum.YELLOW.getAnsiCode() + "Allergeni: ");
+            }else {
+                System.out.print(ColorEnum.YELLOW.getAnsiCode() + "Allergeni: ");
                 int lastIndex = portata.getAllergeni().size() - 1;
                 if (portata.getAllergeni().size() > 1){
                     portata.getAllergeni().forEach(allergene -> {
                         if (portata.getAllergeni().lastIndexOf(allergene) == lastIndex){
-                            System.out.print(ColorEnum.BLUE.getAnsiCode() + allergene + ";");
-                        } else System.out.print(ColorEnum.BLUE.getAnsiCode() +allergene + "," );
+                            System.out.print(ColorEnum.RED.getAnsiCode() +allergene + ";");
+                        } else System.out.print(ColorEnum.RED.getAnsiCode() +allergene + "," );
                     });
                 } else {
-                     portata.getAllergeni().forEach(allergene -> System.out.print(ColorEnum.RED.getAnsiCode() + allergene + "; "));
-                 }
+                    portata.getAllergeni().forEach(allergene -> System.out.print(ColorEnum.RED.getAnsiCode() +allergene + "; "));
+                }
                 System.out.println("\n");
             }
         }
 
     }
 }
-
-
-
-
