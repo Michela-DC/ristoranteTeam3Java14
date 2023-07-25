@@ -1,18 +1,17 @@
 import java.util.ArrayList;
 import java.util.List;
-
 public class Menu {
 
     private List<Portata> listaPortate;
     private String title;
     private String description;
 
-
     public Menu(String title, String description) {
         this.title = title;
         this.description = description;
         listaPortate = new ArrayList<>();
     }
+
     public void aggiungiPortata(Portata portata) {
         listaPortate.add(portata);
     }
@@ -21,12 +20,14 @@ public class Menu {
         listaPortate.remove(portata);
     }
 
-
     public void stampaPortate() {
         int conta = 0;
+
         System.out.println(title + "\n"+description+"\n" );
         System.out.println(ColorEnum.WHITE.getAnsiCode() + "PRIMI PIATTI:");
+
         for (Portata portata : listaPortate) {
+            // stampa del titolo di ogni sezione sfruttando un contatore count
             if (portata instanceof SecondoPiatto && conta == 0) {
                 System.out.println(ColorEnum.WHITE.getAnsiCode() +"SECONDI PIATTI :");
                 conta++;
@@ -39,22 +40,26 @@ public class Menu {
             }
 
             System.out.println(ColorEnum.GREEN.getAnsiCode() + portata.getName().toUpperCase()
-                               + "  " + ColorEnum.PURPLE.getAnsiCode() + portata.getPrice() + "€"
-                               + "\n" + ColorEnum.CYAN.getAnsiCode() + portata.getDescription());
+                    + "  " + ColorEnum.PURPLE.getAnsiCode() + portata.getPrice() + "€"
+                    + "\n" + ColorEnum.CYAN.getAnsiCode() + portata.getDescription());
 
-            if (portata.getAllergeni().isEmpty()){
+            List<String> listaAllergeni = portata.getAllergeni(); // Salvo la lista degli allergeni dentro una variabile
+
+            // If - else che usiamo per gestire la stampa degli allergeni
+            if (listaAllergeni.isEmpty()){ // Caso in cui non ci sono allergeni
                 System.out.println(ColorEnum.YELLOW.getAnsiCode() + "Allergeni: " + ColorEnum.RED.getAnsiCode() + "Non ci sono allergeni"+ "\n");
-            }else {
+            }else { // caso in cui sono presenti degli allergeni
                 System.out.print(ColorEnum.YELLOW.getAnsiCode() + "Allergeni: ");
-                int lastIndex = portata.getAllergeni().size() - 1;
-                if (portata.getAllergeni().size() > 1){
-                    portata.getAllergeni().forEach(allergene -> {
-                        if (portata.getAllergeni().lastIndexOf(allergene) == lastIndex){
-                            System.out.print(ColorEnum.RED.getAnsiCode() +allergene + ";");
-                        } else System.out.print(ColorEnum.RED.getAnsiCode() +allergene + "," );
+                int lastIndex = listaAllergeni.size() - 1; //utilizziamo la variabile lastIndex per salvare l'ultima posizione all'interno della lista degli allergeni
+
+                if (listaAllergeni.size() > 1){ //se la grandezza della lista degli allergeni è > 1 allora ci cicliamo dentro
+                    listaAllergeni.forEach(allergene -> {
+                        if (listaAllergeni.lastIndexOf(allergene) == lastIndex){ // se l'attuale allergene è nell'ultima posizione della lista
+                            System.out.print(ColorEnum.RED.getAnsiCode() +allergene + ";"); // allora stampiamo allergene con il ;
+                        } else System.out.print(ColorEnum.RED.getAnsiCode() +allergene + ", " ); // altrimenti stampiamo l'allergene con la virgola
                     });
-                } else {
-                    portata.getAllergeni().forEach(allergene -> System.out.print(ColorEnum.RED.getAnsiCode() +allergene + "; "));
+                } else { //se la lista ha un solo allergene allora stampiamo direttamente allergene e il ;
+                    listaAllergeni.forEach(allergene -> System.out.print(ColorEnum.RED.getAnsiCode() +allergene + ";"));
                 }
                 System.out.println("\n");
             }

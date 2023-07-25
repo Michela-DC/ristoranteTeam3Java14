@@ -6,6 +6,4 @@ public class PrimoPiatto extends Portata{
         super(name, price, description, allergeni);
     }
 
-
-
 }

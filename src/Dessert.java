@@ -6,10 +6,4 @@ public class Dessert extends Portata{
         super(name, price, description, allergeni);
     }
 
-
-
-
-
-
-
 }

@@ -7,7 +7,6 @@ public class Portata {
     private String description;
     private List<String> allergeni;
 
-
     public Portata(String name, double price, String description, List<String> allergeni) {
         this.name = name;
         this.price = price;
@@ -22,6 +21,7 @@ public class Portata {
     public void setAllergeni(List<String> allergeni) {
         this.allergeni = allergeni;
     }
+
     public String getName() {
         return name;
     }
@@ -45,10 +45,6 @@ public class Portata {
     public void setDescription(String description) {
         this.description = description;
     }
-
-
-
-
 
 }
 
