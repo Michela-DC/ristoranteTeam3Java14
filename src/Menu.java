@@ -21,6 +21,7 @@ public class Menu {
         listaPortate.remove(portata);
     }
 
+
     public void stampaPortate() {
         int conta = 0;
         System.out.println(title + "\n"+description+"\n" );
@@ -44,10 +45,13 @@ public class Menu {
                 if (portata.getAllergeni().size() > 1){
                     portata.getAllergeni().forEach(allergene -> {
                         if (portata.getAllergeni().lastIndexOf(allergene) == lastIndex){
+                            // quando c e un solo allergene add un ;
                             System.out.print(allergene + ";");
+                            //invece quando ci sono piu allergeni stampa una virgola tra gli allergeni
                         } else System.out.print(allergene + "," );
                     });
                 } else {
+                    //stampa il ; dopo gli allergeni
                      portata.getAllergeni().forEach(allergene -> System.out.print(allergene + "; "));
                  }
                 System.out.println("\n");

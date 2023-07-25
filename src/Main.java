@@ -29,15 +29,19 @@ public class Main {
         menu.aggiungiPortata(abbacchioAllaRomana);
         menu.aggiungiPortata(polloAllaCacciatora);
 
-//        Portata sorbettoAlLimone = new Dessert("Sorbetto al limone", 5.00, "Coppa di sorbetto con limoni freschi di Siracusa igp");
-//        Portata tiramisu= new Dessert("Tiramisù", 6.00, "Fetta di tiramisù con mascarpone, savoiardi,caffè e amaretto di Saronno");
-//        Portata pannaCotta = new Dessert("Panna Cotta", 4.50, "Panna cotta con succo di fragole fresche frullate");
-//        Portata cheesecake = new Dessert("Cheescake al Pistacchio", 8.90, "Fetta di Cheescake al pistacchio di Bronte con base di biscotti");
-//
-//        menu.aggiungiPortata(sorbettoAlLimone);
-//        menu.aggiungiPortata(tiramisu);
-//        menu.aggiungiPortata(pannaCotta);
-//        menu.aggiungiPortata(cheesecake);
+
+        //dessert
+
+//list.of:va a inserire dentro la lista gli allergeni che servono
+        Portata sorbettoAlLimone = new Dessert("Sorbetto al limone", 5.00, "Coppa di sorbetto con limoni freschi di Siracusa igp",List.of(AllergeniEnum.LATTE.getDescrizione(), AllergeniEnum.UOVA.getDescrizione()));
+        Portata tiramisu= new Dessert("Tiramisù", 6.00, "Fetta di tiramisù con mascarpone, savoiardi,caffè e amaretto di Saronno",List.of(AllergeniEnum.LATTE.getDescrizione(),AllergeniEnum.UOVA.getDescrizione()));
+        Portata pannaCotta = new Dessert("Panna Cotta", 4.50, "Panna cotta con succo di fragole fresche frullate",List.of());
+        Portata cheesecake = new Dessert("Cheescake al Pistacchio", 8.90, "Fetta di Cheescake al pistacchio di Bronte con base di biscotti",List.of(AllergeniEnum.LATTE.getDescrizione(),AllergeniEnum.UOVA.getDescrizione()));
+
+        menu.aggiungiPortata(sorbettoAlLimone);
+        menu.aggiungiPortata(tiramisu);
+        menu.aggiungiPortata(pannaCotta);
+        menu.aggiungiPortata(cheesecake);
 
         Portata acquaNaturale = new Bevanda("Acqua naturale", 3.00, "1l", List.of());
         Portata acquaFrizzante = new Bevanda("Acqua frizzante", 3.00, "1l", List.of());
