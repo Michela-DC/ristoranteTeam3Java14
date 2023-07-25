@@ -39,25 +39,25 @@ public class Main {
 //        menu.aggiungiPortata(pannaCotta);
 //        menu.aggiungiPortata(cheesecake);
 
-//        Portata acquaNaturale = new Bevanda("Acqua naturale", 3.00, "1l");
-//        Portata acquaFrizzante = new Bevanda("Acqua frizzante", 3.00, "1l");
-//        Portata cocaCola = new Bevanda("Coca Cola", 3.5, "lattina 33cl");
-//        Portata sprite = new Bevanda("Sprite", 3.5, "lattina 33cl");
-//        Portata fanta = new Bevanda("Fanta", 3.5, "lattina 33cl");
-//        Portata theLimone = new Bevanda("Thé al limone", 3.5, "lattina 33cl");
-//        Portata birraPiccola = new Bevanda("Birra piccola", 4.00, "25cl, Alc %5,00");
-//        Portata birraMedia = new Bevanda("Birra media", 6.00, "40cl, Alc %5,00");
-//        Portata caliceVino = new Bevanda("Calice di vino", 5.50, "Alc %12,00");
+        Portata acquaNaturale = new Bevanda("Acqua naturale", 3.00, "1l", List.of());
+        Portata acquaFrizzante = new Bevanda("Acqua frizzante", 3.00, "1l", List.of());
+        Portata cocaCola = new Bevanda("Coca Cola", 3.5, "lattina 33cl", List.of());
+        Portata sprite = new Bevanda("Sprite", 3.5, "lattina 33cl", List.of());
+        Portata fanta = new Bevanda("Fanta", 3.5, "lattina 33cl", List.of());
+        Portata theLimone = new Bevanda("Thé al limone", 3.5, "lattina 33cl", List.of());
+        Portata birraPiccola = new Bevanda("Birra piccola", 4.00, "25cl, Alc %5,00", List.of());
+        Portata birraMedia = new Bevanda("Birra media", 6.00, "40cl, Alc %5,00", List.of());
+        Portata caliceVino = new Bevanda("Calice di vino", 5.50, "Alc %12,00", List.of());
 
-//        menu.aggiungiPortata(acquaNaturale);
-//        menu.aggiungiPortata(acquaFrizzante);
-//        menu.aggiungiPortata(cocaCola);
-//        menu.aggiungiPortata(sprite);
-//        menu.aggiungiPortata(fanta);
-//        menu.aggiungiPortata(theLimone);
-//        menu.aggiungiPortata(birraPiccola);
-//        menu.aggiungiPortata(birraMedia);
-//        menu.aggiungiPortata(caliceVino);
+        menu.aggiungiPortata(acquaNaturale);
+        menu.aggiungiPortata(acquaFrizzante);
+        menu.aggiungiPortata(cocaCola);
+        menu.aggiungiPortata(sprite);
+        menu.aggiungiPortata(fanta);
+        menu.aggiungiPortata(theLimone);
+        menu.aggiungiPortata(birraPiccola);
+        menu.aggiungiPortata(birraMedia);
+        menu.aggiungiPortata(caliceVino);
 
         menu.stampaPortate();
     }
