@@ -36,7 +36,22 @@ public class Menu {
                 System.out.println("BEVANDE :");
                 conta++;
             }
-            System.out.println(portata.getName().toUpperCase() + "  " + portata.getPrice() + "€" + "\n" + portata.getDescription() + "\n");
+            System.out.println(portata.getName().toUpperCase() + "  " + portata.getPrice() + "€" + "\n" + portata.getDescription());
+            if (portata.getAllergeni().isEmpty()){
+                System.out.println("Allergeni: " + "Non ci sono allergeni"+ "\n");
+            }else {System.out.print("Allergeni: ");
+                int lastIndex = portata.getAllergeni().size() - 1;
+                if (portata.getAllergeni().size() > 1){
+                    portata.getAllergeni().forEach(allergene -> {
+                        if (portata.getAllergeni().lastIndexOf(allergene) == lastIndex){
+                            System.out.print(allergene + ";");
+                        } else System.out.print(allergene + "," );
+                    });
+                } else {
+                     portata.getAllergeni().forEach(allergene -> System.out.print(allergene + "; "));
+                 }
+                System.out.println("\n");
+            }
         }
 
     }
