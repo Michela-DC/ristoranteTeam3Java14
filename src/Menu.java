@@ -31,10 +31,13 @@ public class Menu {
             if (portata instanceof SecondoPiatto && conta == 0) {
                 System.out.println(ColorEnum.WHITE.getAnsiCode() +"SECONDI PIATTI :");
                 conta++;
-            } else if (portata instanceof Dessert && conta == 1) {
+            } else if (portata instanceof SecondoPiatto && conta == 1) {
+                System.out.println(ColorEnum.WHITE.getAnsiCode() +"CONTORNI :");
+                conta++;
+            } else if (portata instanceof Dessert && conta == 2) {
                 System.out.println(ColorEnum.WHITE.getAnsiCode() +"DESSERT :");
                 conta++;
-            } else if (portata instanceof Bevanda && conta == 2) {
+            } else if (portata instanceof Bevanda && conta == 3) {
                 System.out.println(ColorEnum.WHITE.getAnsiCode() +"BEVANDE :");
                 conta++;
             }

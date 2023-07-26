@@ -32,6 +32,17 @@ public class Main {
         menu.aggiungiPortata(abbacchioAllaRomana);
         menu.aggiungiPortata(polloAllaCacciatora);
 
+        //Contorni
+        Portata patateAlForno = new Contorno("Patate al forno", 7.00, "Patate cotte al forno con olio e rosmarino", List.of());
+        Portata verdureGrigliate = new Contorno("Verdure grigliate", 7.20, "Melanzane, zucchine, peperoni, marinate in olio, sale, pepe, aglio e prezzemolo", List.of());
+        Portata insalataMista = new Contorno("insalata mista", 6.80, "Lattuga, pomodorini, carote, uova", List.of(AllergeniEnum.UOVA.getDescrizione()));
+        Portata caponata = new Contorno("Caponata", 7.50, "Melanzane, zucchine, cipolla, polpa di pomodoro, sale, olio, pepe, aceto di vino bianco, zucchero", List.of());
+
+        menu.aggiungiPortata(patateAlForno);
+        menu.aggiungiPortata(verdureGrigliate);
+        menu.aggiungiPortata(insalataMista);
+        menu.aggiungiPortata(caponata);
+
         // Dessert
         Portata sorbettoAlLimone = new Dessert("Sorbetto al limone", 5.00, "Coppa di sorbetto con limoni freschi di Siracusa igp",List.of(AllergeniEnum.LATTE.getDescrizione(), AllergeniEnum.UOVA.getDescrizione()));
         Portata tiramisu= new Dessert("Tiramisù", 6.00, "Fetta di tiramisù con mascarpone, savoiardi,caffè e amaretto di Saronno",List.of(AllergeniEnum.LATTE.getDescrizione(),AllergeniEnum.UOVA.getDescrizione()));
