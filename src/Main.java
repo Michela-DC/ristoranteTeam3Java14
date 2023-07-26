@@ -5,9 +5,8 @@ public class Main {
 
         Menu menu = new Menu("RISTORANTE GLI ORSI BRUNI", "Contemporary and classic italian cuisine");
 
-        
-      // List.of() lo usiamo per creare una lista di allergeni che prendiamo da AllergeniEnum
         //Antipasti
+        // List.of() lo usiamo per creare una lista di allergeni che prendiamo da AllergeniEnum
         Portata polentinaConcia = new Antipasti("Polentina Concia" , 6.50 , "Polenta morbida al burro e fontina con sbriciolata di prosciutto crudo essicato", List.of(AllergeniEnum.LATTE.getDescrizione()));
         Portata tartareDiManzo = new Antipasti("Tartare di manzo" , 10.50 , "Con cremoso al pecorino, funghi pleius scottati e polvere di porcino essiccato", List.of(AllergeniEnum.LATTE.getDescrizione()));
         Portata iNostriSpiedini = new Antipasti("I nostri spiedini" , 9.50 , "Spiedini di manzo con crema delicata all’aglio e mentuccia, spiedini di maiale , spiedini di vitello con salsa teriyaki e granella di pistacchio", List.of());
@@ -88,10 +87,6 @@ public class Main {
         menu.aggiungiPortata(birraPiccola);
         menu.aggiungiPortata(birraMedia);
         menu.aggiungiPortata(caliceVino);
-
-
-
-
 
         // Stampa di tutte le portate del menu
         menu.stampaPortate();
