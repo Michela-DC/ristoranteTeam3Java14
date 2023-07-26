@@ -8,16 +8,16 @@ public class Main {
         // Primi Piatti
         // List.of() lo usiamo per creare una lista di allergeni che prendiamo da AllergeniEnum
         Portata spaghettiAllaCarbonara = new PrimoPiatto("Spaghetti alla carbonara" , 10.50,"Spaghetti conditi con uova, pancetta, pecorino romano e pepe nero", List.of(AllergeniEnum.GLUTINE.getDescrizione(), AllergeniEnum.UOVA.getDescrizione()));
-        Portata risottoAiFunghi = new PrimoPiatto("Risotto ai funghi" , 12.50,"Risotto cremoso preparato con funghi porcini freschi e parmigiano reggiano", List.of(AllergeniEnum.LATTE.getDescrizione()));
+        Portata risottoAiFunghiESalsiccia = new PrimoPiatto("Risotto ai funghi e salsiccia" , 12.50,"Risotto cremoso preparato con funghi porcini freschi e parmigiano reggiano", List.of(AllergeniEnum.LATTE.getDescrizione()));
         Portata lasagneAlRagu = new PrimoPiatto("Lasagne al ragù" , 12.00,"Strati di pasta all'uovo, ragù di carne, besciamella e formaggio gratinato", List.of(AllergeniEnum.GLUTINE.getDescrizione())) ;
         Portata penneAllArrabbiata = new PrimoPiatto("Penne all'arrabbiata" , 9.00,"Penne condite con salsa piccante al pomodoro, aglio, peperoncino e prezzemolo", List.of(AllergeniEnum.GLUTINE.getDescrizione()));
-        Portata gnocchiAlPesto = new PrimoPiatto("Gnocchi al pesto" , 8.50,"Gnocchi di patate freschi serviti con salsa al basilico, pinoli, parmigiano e olio d'oliva", List.of(AllergeniEnum.GLUTINE.getDescrizione(), AllergeniEnum.LATTE.getDescrizione(), AllergeniEnum.FRUTTA_A_GUSCIO.getDescrizione()));
+        Portata pappardelleAlCinghiale = new PrimoPiatto("Pappardelle al cinghiale" , 9.50,"Gnocchi di patate freschi serviti con salsa al basilico, pinoli, parmigiano e olio d'oliva", List.of(AllergeniEnum.GLUTINE.getDescrizione(), AllergeniEnum.LATTE.getDescrizione(), AllergeniEnum.FRUTTA_A_GUSCIO.getDescrizione()));
 
         menu.aggiungiPortata(spaghettiAllaCarbonara);
-        menu.aggiungiPortata(risottoAiFunghi);
+        menu.aggiungiPortata(risottoAiFunghiESalsiccia);
         menu.aggiungiPortata(lasagneAlRagu);
         menu.aggiungiPortata(penneAllArrabbiata);
-        menu.aggiungiPortata(gnocchiAlPesto);
+        menu.aggiungiPortata(pappardelleAlCinghiale);
 
         // Secondi
         Portata scaloppineAlLimone = new SecondoPiatto("Scaloppine al limone", 12.00, "Fettine di vitello  battute e poi cotte in padella con succo di limone, burro e prezzemolo", List.of());
