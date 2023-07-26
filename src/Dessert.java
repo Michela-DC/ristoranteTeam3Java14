@@ -6,4 +6,8 @@ public class Dessert extends Portata{
         super(name, price, description, allergeni);
     }
 
+    @Override
+    public String getClassName() {
+        return "Desserts";
+    }
 }

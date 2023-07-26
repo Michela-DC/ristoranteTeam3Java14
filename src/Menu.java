@@ -24,33 +24,35 @@ public class Menu {
         int conta = 0;
 
         System.out.println(title + "\n"+description+"\n" );
-        System.out.println(ColorEnum.WHITE.getAnsiCode() + "PRIMI PIATTI:");
 
         for (Portata portata : listaPortate) {
             // stampa del titolo di ogni sezione sfruttando un contatore count
-            if (portata instanceof SecondoPiatto && conta == 0) {
-                System.out.println(ColorEnum.WHITE.getAnsiCode() +"SECONDI PIATTI :");
+         if (portata instanceof Antipasti && conta == 0) {
+             System.out.println(ColorEnum.WHITE.getAnsiCode() + portata.getClassName().toUpperCase()+ ":");
                 conta++;
-            } else if (portata instanceof SecondoPiatto && conta == 1) {
-                System.out.println(ColorEnum.WHITE.getAnsiCode() +"CONTORNI :");
+            } else if (portata instanceof PrimoPiatto && conta == 1) {
+                System.out.println(ColorEnum.WHITE.getAnsiCode() + portata.getClassName().toUpperCase()+ ":");
                 conta++;
-            } else if (portata instanceof Dessert && conta == 2) {
-                System.out.println(ColorEnum.WHITE.getAnsiCode() +"DESSERT :");
+            } else if (portata instanceof SecondoPiatto && conta == 2) {
+                System.out.println(ColorEnum.WHITE.getAnsiCode() +portata.getClassName().toUpperCase()+ ":");
                 conta++;
-            } else if (portata instanceof Bevanda && conta == 3) {
-                System.out.println(ColorEnum.WHITE.getAnsiCode() +"BEVANDE :");
+            } else if (portata instanceof Dessert && conta == 3) {
+                System.out.println(ColorEnum.WHITE.getAnsiCode() +portata.getClassName().toUpperCase() + ":");
+                conta++;
+            } else if (portata instanceof Bevanda && conta == 4) {
+                System.out.println(ColorEnum.WHITE.getAnsiCode() +portata.getClassName().toUpperCase() + ":");
                 conta++;
             }
 
             System.out.println(ColorEnum.GREEN.getAnsiCode() + portata.getName().toUpperCase()
                     + "  " + ColorEnum.PURPLE.getAnsiCode() + portata.getPrice() + "€"
-                    + "\n" + ColorEnum.CYAN.getAnsiCode() + portata.getDescription());
+                    + "\n" + ColorEnum.CYAN.getAnsiCode() + portata.getDescription() + ";");
 
             List<String> listaAllergeni = portata.getAllergeni(); // Salvo la lista degli allergeni dentro una variabile
 
             // If - else che usiamo per gestire la stampa degli allergeni
             if (listaAllergeni.isEmpty()){ // Caso in cui non ci sono allergeni
-                System.out.println(ColorEnum.YELLOW.getAnsiCode() + "Allergeni: " + ColorEnum.RED.getAnsiCode() + "Non ci sono allergeni"+ "\n");
+                System.out.println(ColorEnum.YELLOW.getAnsiCode() + "Allergeni: " + ColorEnum.RED.getAnsiCode() + "Non ci sono allergeni;"+ "\n");
             }else { // caso in cui sono presenti degli allergeni
                 System.out.print(ColorEnum.YELLOW.getAnsiCode() + "Allergeni: ");
                 int lastIndex = listaAllergeni.size() - 1; //utilizziamo la variabile lastIndex per salvare l'ultima posizione all'interno della lista degli allergeni

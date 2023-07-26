@@ -7,6 +7,24 @@ public class Main {
 
         // Primi Piatti
         // List.of() lo usiamo per creare una lista di allergeni che prendiamo da AllergeniEnum
+        Portata polentinaConcia = new Antipasti("Polentina Concia" , 6.50 , "Polenta morbida al burro e fontina con sbriciolata di prosciutto crudo essicato", List.of(AllergeniEnum.LATTE.getDescrizione()));
+        Portata tartareDiManzo = new Antipasti("Tartare di manzo" , 10.50 , "Con cremoso al pecorino, funghi pleius scottati e polvere di porcino essiccato", List.of(AllergeniEnum.LATTE.getDescrizione()));
+        Portata iNostriSpiedini = new Antipasti("I nostri spiedini" , 9.50 , "Spiedini di manzo con crema delicata all’aglio e mentuccia, spiedini di maiale , spiedini di vitello con salsa teriyaki e granella di pistacchio", List.of());
+        Portata bresaolaRucolaParmigiano = new Antipasti("Bresaola con rucola e parmigiano" , 8.50 , "Sottili fette di carne di manzo essiccata servite con rucola e scaglie di parmigiano", List.of(AllergeniEnum.LATTE.getDescrizione()));
+        Portata salumiMisti = new Antipasti("Tagliere di salumi misti" , 12.50 , "Un assortimento di salumi come prosciutto, salame, coppa, bresaola e mortadella", List.of());
+
+        menu.aggiungiPortata(polentinaConcia);
+        menu.aggiungiPortata(tartareDiManzo);
+        menu.aggiungiPortata(iNostriSpiedini);
+        menu.aggiungiPortata(bresaolaRucolaParmigiano);
+        menu.aggiungiPortata(salumiMisti);
+
+
+
+
+
+
+
         Portata spaghettiAllaCarbonara = new PrimoPiatto("Spaghetti alla carbonara" , 10.50,"Spaghetti conditi con uova, pancetta, pecorino romano e pepe nero", List.of(AllergeniEnum.GLUTINE.getDescrizione(), AllergeniEnum.UOVA.getDescrizione()));
         Portata risottoAiFunghiESalsiccia = new PrimoPiatto("Risotto ai funghi e salsiccia" , 12.50,"Risotto cremoso preparato con funghi porcini freschi e parmigiano reggiano", List.of(AllergeniEnum.LATTE.getDescrizione()));
         Portata lasagneAlRagu = new PrimoPiatto("Lasagne al ragù" , 12.00,"Strati di pasta all'uovo, ragù di carne, besciamella e formaggio gratinato", List.of(AllergeniEnum.GLUTINE.getDescrizione())) ;
@@ -74,6 +92,10 @@ public class Main {
         menu.aggiungiPortata(birraPiccola);
         menu.aggiungiPortata(birraMedia);
         menu.aggiungiPortata(caliceVino);
+
+
+
+
 
         // Stampa di tutte le portate del menu
         menu.stampaPortate();

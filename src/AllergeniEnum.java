@@ -9,7 +9,7 @@ public enum AllergeniEnum {
     CROSTACEI("crostacei");
 
 
-    private  String descrizione;
+    private String descrizione;
 
     AllergeniEnum(String descrizione){
 

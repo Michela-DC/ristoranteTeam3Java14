@@ -46,5 +46,8 @@ public class Portata {
         this.description = description;
     }
 
+    public String getClassName(){
+        return null;
+    }
 }
 
