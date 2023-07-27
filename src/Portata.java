@@ -48,9 +48,15 @@ public class Portata {
         this.description = description;
     }
 
+<<<<<<< HEAD
     public void printInfoPortata(){
         System.out.println(ColorEnum.GREEN.getAnsiCode()+getName() + " " + ColorEnum.PURPLE.getAnsiCode()+getPrice()+"€" + "\n" + ColorEnum.CYAN.getAnsiCode()+getDescription() +
                            "\n" +ColorEnum.YELLOW.getAnsiCode()+"Allergeni : " +ColorEnum.RED.getAnsiCode()+getAllergeni());
     }
+=======
+//    public void printInfoPortata(){
+//        System.out.println("Tutti i campi 88888888888");
+//    }
+>>>>>>> 38ce93793fc635c6e908f96c6d19a7bb11f7886c
 }
 

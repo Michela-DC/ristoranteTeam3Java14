@@ -1,7 +1,6 @@
 import java.util.List;
 
 public class Antipasti extends Portata {
-
     private boolean isMare;
 
 

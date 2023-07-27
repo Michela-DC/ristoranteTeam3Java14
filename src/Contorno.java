@@ -5,4 +5,8 @@ public class Contorno extends Portata {
         super(name, price, description, allergeni);
     }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 38ce93793fc635c6e908f96c6d19a7bb11f7886c
 }

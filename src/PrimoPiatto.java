@@ -5,4 +5,10 @@ public class PrimoPiatto extends Portata {
     public PrimoPiatto(String name, Double price, String description, List<AllergeniEnum> allergeni) {
         super(name, price, description, allergeni);
     }
+<<<<<<< HEAD
 }
+=======
+
+
+}
+>>>>>>> 38ce93793fc635c6e908f96c6d19a7bb11f7886c
