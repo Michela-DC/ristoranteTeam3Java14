@@ -1,3 +1,5 @@
+import Enumerati.ColorEnum;
+
 import java.util.List;
 
 public class Portata {

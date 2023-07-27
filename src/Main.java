@@ -20,22 +20,12 @@ public class Main {
         menu.aggiungiPortata(bresaolaRucolaParmigiano);
         menu.aggiungiPortata(salumiMisti);
 
-
         //Primi piatti
-<<<<<<< HEAD
         Portata spaghettiAllaCarbonara = new PrimoPiatto("Spaghetti alla carbonara" , 10.50,"Spaghetti conditi con uova, pancetta, pecorino romano e pepe nero", List.of(AllergeniEnum.GLUTINE, AllergeniEnum.UOVA));
         Portata risottoAiFunghiESalsiccia = new PrimoPiatto("Risotto ai funghi e salsiccia" , 12.50,"Risotto cremoso preparato con funghi porcini freschi e parmigiano reggiano", List.of(AllergeniEnum.LATTE));
         Portata lasagneAlRagu = new PrimoPiatto("Lasagne al ragù" , 12.00,"Strati di pasta all'uovo, ragù di carne, besciamella e formaggio gratinato", List.of(AllergeniEnum.GLUTINE)) ;
         Portata penneAllArrabbiata = new PrimoPiatto("Penne all'arrabbiata" , 9.00,"Penne condite con salsa piccante al pomodoro, aglio, peperoncino e prezzemolo", List.of(AllergeniEnum.GLUTINE));
         Portata pappardelleAlCinghiale = new PrimoPiatto("Pappardelle al cinghiale" , 9.50,"Gnocchi di patate freschi serviti con salsa al basilico, pinoli, parmigiano e olio d'oliva", List.of(AllergeniEnum.GLUTINE, AllergeniEnum.LATTE, AllergeniEnum.FRUTTA_A_GUSCIO));
-=======
-
-        Portata spaghettiAllaCarbonara = new PrimoPiatto("Spaghetti alla carbonara" , 10.50,"Spaghetti conditi con uova, pancetta, pecorino romano e pepe nero", List.of(AllergeniEnum.GLUTINE.getDescrizione(), AllergeniEnum.UOVA.getDescrizione()));
-        Portata risottoAiFunghiESalsiccia = new PrimoPiatto("Risotto ai funghi e salsiccia" , 12.50,"Risotto cremoso preparato con funghi porcini freschi e parmigiano reggiano", List.of(AllergeniEnum.LATTE.getDescrizione()));
-        Portata lasagneAlRagu = new PrimoPiatto("Lasagne al ragù" , 12.00,"Strati di pasta all'uovo, ragù di carne, besciamella e formaggio gratinato", List.of(AllergeniEnum.GLUTINE.getDescrizione())) ;
-        Portata penneAllArrabbiata = new PrimoPiatto("Penne all'arrabbiata" , 9.00,"Penne condite con salsa piccante al pomodoro, aglio, peperoncino e prezzemolo", List.of(AllergeniEnum.GLUTINE.getDescrizione()));
-        Portata pappardelleAlCinghiale = new PrimoPiatto("Pappardelle al cinghiale" , 9.50,"Gnocchi di patate freschi serviti con salsa al basilico, pinoli, parmigiano e olio d'oliva", List.of(AllergeniEnum.GLUTINE.getDescrizione(), AllergeniEnum.LATTE.getDescrizione(), AllergeniEnum.FRUTTA_A_GUSCIO.getDescrizione()));
->>>>>>> 38ce93793fc635c6e908f96c6d19a7bb11f7886c
 
         menu.aggiungiPortata(spaghettiAllaCarbonara);
         menu.aggiungiPortata(risottoAiFunghiESalsiccia);
