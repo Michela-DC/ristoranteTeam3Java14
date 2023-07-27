@@ -2,10 +2,11 @@ import Enumerati.ColorEnum;
 
 import java.util.List;
 
+
 public class Bevanda extends Portata {
     private Double tassoAlcolico;
 
-    public Bevanda(String name, Double price, String description, Double tassoAlcolico, List<AllergeniEnum> allergeni) {
+    public Bevanda(String name, double price, String description,Double tassoAlcolico, List<AllergeniEnum> allergeni) {
         super(name, price, description, allergeni);
         this.tassoAlcolico = tassoAlcolico;
     }
@@ -13,11 +14,11 @@ public class Bevanda extends Portata {
 
     public Double getTassoAlcolico() {
         return tassoAlcolico;
-    }
+        }
+        public void setTassoAlcolico(Double tassoAlcolico) {
+         this.tassoAlcolico = tassoAlcolico;
+         }
 
-    public void setTassoAlcolico(Double tassoAlcolico) {
-        this.tassoAlcolico = tassoAlcolico;
-    }
 
     @Override
     public void printInfoPortata() {
@@ -29,4 +30,7 @@ public class Bevanda extends Portata {
         }
     }
 }
+
+
+
 
