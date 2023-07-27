@@ -5,8 +5,5 @@ public class Contorno extends Portata{
         super(name, price, description, allergeni);
     }
 
-    @Override
-    public String getClassName() {
-        return "Contorni";
-    }
+
 }

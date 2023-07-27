@@ -5,6 +5,8 @@ public class Portata {
     private String name;
     private Double price;
     private String description;
+
+    //TODO usare enumerato
     private List<String> allergeni;
 
     public Portata(String name, double price, String description, List<String> allergeni) {
@@ -46,8 +48,8 @@ public class Portata {
         this.description = description;
     }
 
-    public String getClassName(){
-        return null;
-    }
+//    public void printInfoPortata(){
+//        System.out.println("Tutti i campi 88888888888");
+//    }
 }
 

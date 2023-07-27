@@ -6,8 +6,5 @@ public class PrimoPiatto extends Portata{
         super(name, price, description, allergeni);
     }
 
-    @Override
-    public String getClassName() {
-        return "Primi piatti";
-    }
+
 }
