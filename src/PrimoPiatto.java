@@ -1,13 +1,8 @@
 import java.util.List;
 
-public class PrimoPiatto extends Portata{
+public class PrimoPiatto extends Portata {
 
-    public PrimoPiatto(String name, Double price, String description, List<String> allergeni) {
+    public PrimoPiatto(String name, Double price, String description, List<AllergeniEnum> allergeni) {
         super(name, price, description, allergeni);
-    }
-
-    @Override
-    public String getClassName() {
-        return "Primi piatti";
     }
 }

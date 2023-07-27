@@ -7,20 +7,20 @@ public class Portata {
     private String description;
 
     //TODO usare enumerato
-    private List<String> allergeni;
+    private List<AllergeniEnum> allergeni;
 
-    public Portata(String name, double price, String description, List<String> allergeni) {
+    public Portata(String name, double price, String description, List<AllergeniEnum> allergeni) {
         this.name = name;
         this.price = price;
         this.description = description;
         this.allergeni = allergeni;
     }
 
-    public List<String> getAllergeni() {
+    public List<AllergeniEnum> getAllergeni() {
         return allergeni;
     }
 
-    public void setAllergeni(List<String> allergeni) {
+    public void setAllergeni(List<AllergeniEnum> allergeni) {
         this.allergeni = allergeni;
     }
 
@@ -49,7 +49,8 @@ public class Portata {
     }
 
     public void printInfoPortata(){
-        System.out.println("Tutti i campi 88888888888");
+        System.out.println(ColorEnum.GREEN.getAnsiCode()+getName() + " " + ColorEnum.PURPLE.getAnsiCode()+getPrice()+"€" + "\n" + ColorEnum.CYAN.getAnsiCode()+getDescription() +
+                           "\n" +ColorEnum.YELLOW.getAnsiCode()+"Allergeni : " +ColorEnum.RED.getAnsiCode()+getAllergeni());
     }
 }
 
