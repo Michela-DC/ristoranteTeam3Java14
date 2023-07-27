@@ -70,6 +70,7 @@ public class Menu {
             }
         }
 
+
         System.out.println(ColorEnum.WHITE.getAnsiCode()+ "\nBEVANDE: ");
         for (Portata p : listaPortate) {
             if (p instanceof Bevanda) {

@@ -24,7 +24,7 @@ public class Bevanda extends Portata {
     public void printInfoPortata() {
         super.printInfoPortata();
         if (tassoAlcolico == null){
-            System.out.println(" ");
+            System.out.println(ColorEnum.CYAN.getAnsiCode() + "Tasso alcolico: ");
         }else {
             System.out.println(ColorEnum.CYAN.getAnsiCode() + "Tasso alcolico: " + tassoAlcolico);
         }
