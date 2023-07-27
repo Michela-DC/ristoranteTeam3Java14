@@ -2,6 +2,7 @@ import java.util.ArrayList;
 import java.util.List;
 public class Menu {
 
+    public static final String ALLERGENI = "Allergeni";
     private List<Portata> listaPortate;
     private String title;
     private String description;
@@ -28,9 +29,11 @@ public class Menu {
         for (Portata portata : listaPortate) {
             // stampa del titolo di ogni sezione sfruttando un contatore count
          if (portata instanceof Antipasti && conta == 0) {
-             System.out.println(ColorEnum.WHITE.getAnsiCode() + portata.getClassName().toUpperCase()+ ":");
+             System.out.println(ColorEnum.WHITE.getAnsiCode() + ((Antipasti) portata).getClass().getName()+ ":");
                 conta++;
             } else if (portata instanceof PrimoPiatto && conta == 1) {
+                //TODO sistemare
+                portata.printInfoPortata();
                 System.out.println(ColorEnum.WHITE.getAnsiCode() + portata.getClassName().toUpperCase()+ ":");
                 conta++;
             } else if (portata instanceof SecondoPiatto && conta == 2) {
@@ -52,23 +55,62 @@ public class Menu {
 
             // If - else che usiamo per gestire la stampa degli allergeni
             if (listaAllergeni.isEmpty()){ // Caso in cui non ci sono allergeni
-                System.out.println(ColorEnum.YELLOW.getAnsiCode() + "Allergeni: " + ColorEnum.RED.getAnsiCode() + "Non ci sono allergeni;"+ "\n");
+                System.out.println(ColorEnum.YELLOW.getAnsiCode() + ALLERGENI + ": " + ColorEnum.RED.getAnsiCode() + "Non ci sono allergeni;"+ "\n");
             }else { // caso in cui sono presenti degli allergeni
-                System.out.print(ColorEnum.YELLOW.getAnsiCode() + "Allergeni: ");
+                System.out.print(ColorEnum.YELLOW.getAnsiCode() + ALLERGENI + ": ");
                 int lastIndex = listaAllergeni.size() - 1; //utilizziamo la variabile lastIndex per salvare l'ultima posizione all'interno della lista degli allergeni
 
                 if (listaAllergeni.size() > 1){ //se la grandezza della lista degli allergeni è > 1 allora ci cicliamo dentro
                     listaAllergeni.forEach(allergene -> {
                         if (listaAllergeni.lastIndexOf(allergene) == lastIndex){ // se l'attuale allergene è nell'ultima posizione della lista
-                            System.out.print(ColorEnum.RED.getAnsiCode() +allergene + ";"); // allora stampiamo allergene con il ;
-                        } else System.out.print(ColorEnum.RED.getAnsiCode() +allergene + ", " ); // altrimenti stampiamo l'allergene con la virgola
+                            System.out.print(ColorEnum.RED.getAnsiCode() +allergene.getDescrizione() + ";"); // allora stampiamo allergene con il ;
+                        } else System.out.print(ColorEnum.RED.getAnsiCode() +allergene.getDescrizione() + ", " ); // altrimenti stampiamo l'allergene con la virgola
                     });
                 } else { //se la lista ha un solo allergene allora stampiamo direttamente allergene e il ;
-                    listaAllergeni.forEach(allergene -> System.out.print(ColorEnum.RED.getAnsiCode() +allergene + ";"));
+                    listaAllergeni.forEach(allergene -> System.out.print(ColorEnum.RED.getAnsiCode() +allergene.getDescrizione() + ";"));
                 }
                 System.out.println("\n");
             }
         }
 
+    }
+
+    public void printMenu(){
+
+        System.out.print("TIPO MENU: ");
+        /*
+            switch (tipoMenu){
+                case CARNE -> System.out.println("Menu di carne\n");
+                case PESCE -> System.out.println("Menu di pesce\n");
+                case VEGANO -> System.out.println("Menu vegano\n");
+                case VEGETARIANO -> System.out.println("Menu vegetariano\n");
+            }
+         */
+        System.out.println(tipoMenu.getName());
+
+        System.out.println("PRIMI PIATTI: \n");
+        for (Portata p : listaPortate) {
+            if (p instanceof PrimoPiatto) {
+                p.printPortata(this.colorEnum);
+            }
+        }
+        System.out.println("\nSECONDI PIATTI: \n");
+        for (Portata p: listaPortate) {
+            if (p.getClass() == SecondoPiatto.class){
+                p.printPortata(this.colorEnum);
+            }
+        }
+        System.out.println("\nDESSERT: \n");
+        for (Portata p: listaPortate) {
+            if (p.getClass() == Dessert.class){
+                p.printPortata(this.colorEnum);
+            }
+        }
+        System.out.println("\nBEVANDE: \n");
+        for (Portata p: listaPortate) {
+            if (p.getClass() == Bevanda.class){
+                p.printPortata(this.colorEnum);
+            }
+        }
     }
 }
