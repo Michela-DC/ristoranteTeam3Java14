@@ -1,8 +1,11 @@
+import Enumerati.ColorEnum;
+
 import java.util.List;
 
 public class SecondoPiatto extends Portata{
-    String origineDellaCarne;
-    public SecondoPiatto(String name, Double price, String description, String origineDellaCarne, List<String> allergeni) {
+    private String origineDellaCarne;
+
+    public SecondoPiatto(String name, Double price, String description, String origineDellaCarne, List<AllergeniEnum> allergeni) {
         super(name, price, description, allergeni);
         this.origineDellaCarne = origineDellaCarne;
     }
@@ -13,5 +16,11 @@ public class SecondoPiatto extends Portata{
 
     public void setOrigineDellaCarne(String origineDellaCarne) {
         this.origineDellaCarne = origineDellaCarne;
+    }
+
+    @Override
+    public void printInfoPortata() {
+        super.printInfoPortata();
+        System.out.println(ColorEnum.CYAN.getAnsiCode() + origineDellaCarne);
     }
 }

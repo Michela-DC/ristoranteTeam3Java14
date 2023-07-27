@@ -1,22 +1,32 @@
+import Enumerati.ColorEnum;
+
 import java.util.List;
 
-public class Bevanda extends Portata{
-    private Double tassoAlcolemico;
+public class Bevanda extends Portata {
+    private Double tassoAlcolico;
 
-
-    //TODO che la facciamo a fare è uguale a portata? le classi figlio devono estendere comportamenti e avere altri field: grado alcolico
-
-    public Bevanda(String name, Double price, String description, Double tassoAlcolemico, List<String> allergeni) {
+    public Bevanda(String name, Double price, String description, Double tassoAlcolico, List<AllergeniEnum> allergeni) {
         super(name, price, description, allergeni);
-        this.tassoAlcolemico = tassoAlcolemico;
+        this.tassoAlcolico = tassoAlcolico;
     }
 
 
-    public Double getTassoAlcolemico() {
-        return tassoAlcolemico;
+    public Double getTassoAlcolico() {
+        return tassoAlcolico;
     }
 
-    public void setTassoAlcolemico(Double tassoAlcolemico) {
-        this.tassoAlcolemico = tassoAlcolemico;
+    public void setTassoAlcolico(Double tassoAlcolico) {
+        this.tassoAlcolico = tassoAlcolico;
+    }
+
+    @Override
+    public void printInfoPortata() {
+        super.printInfoPortata();
+        if (tassoAlcolico == null){
+            System.out.println(" ");
+        }else {
+            System.out.println(ColorEnum.CYAN.getAnsiCode() + "Tasso alcolico: " + tassoAlcolico);
+        }
     }
 }
+

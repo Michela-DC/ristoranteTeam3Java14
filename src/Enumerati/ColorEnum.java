@@ -1,3 +1,5 @@
+package Enumerati;
+
 public enum ColorEnum {
 
     RESET("\u001B[0m", "Resetta un colore usato precedentemente"),
