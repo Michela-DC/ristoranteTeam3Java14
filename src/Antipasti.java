@@ -5,8 +5,8 @@ import java.util.List;
 public class Antipasti extends Portata {
     private boolean isProduzionePropria;
 
-    public Antipasti(String name, double price, String description, Boolean isProduzionePropria, List<AllergeniEnum> allergeni) {
-        super(name, price, description, allergeni);
+    public Antipasti(String name, double price, String description, Integer calories, Boolean isProduzionePropria, List<AllergeniEnum> allergeni) {
+        super(name, price, description, calories, allergeni);
         this.isProduzionePropria = isProduzionePropria;
     }
 

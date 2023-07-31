@@ -6,8 +6,8 @@ import java.util.List;
 public class Bevanda extends Portata {
     private Double tassoAlcolico;
 
-    public Bevanda(String name, double price, String description,Double tassoAlcolico, List<AllergeniEnum> allergeni) {
-        super(name, price, description, allergeni);
+    public Bevanda(String name, double price, String description,Double tassoAlcolico, Integer calories, List<AllergeniEnum> allergeni) {
+        super(name, price, description, calories, allergeni);
         this.tassoAlcolico = tassoAlcolico;
     }
 

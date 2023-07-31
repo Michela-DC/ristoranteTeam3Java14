@@ -4,8 +4,8 @@ import java.util.List;
 
 public class PrimoPiatto extends Portata {
 private Boolean isStagionale;
-    public PrimoPiatto(String name, Double price, String description, Boolean isStagionale, List<AllergeniEnum> allergeni) {
-        super(name, price, description, allergeni);
+    public PrimoPiatto(String name, Double price, String description, Boolean isStagionale, Integer calories, List<AllergeniEnum> allergeni) {
+        super(name, price, description, calories, allergeni);
         this.isStagionale = isStagionale;
     }
 

@@ -8,13 +8,16 @@ public class Portata {
     private Double price;
     private String description;
 
+    private Integer calories;
+
     //TODO usare enumerato
     private List<AllergeniEnum> allergeni;
 
-    public Portata(String name, double price, String description, List<AllergeniEnum> allergeni) {
+    public Portata(String name, Double price, String description, Integer calories, List<AllergeniEnum> allergeni) {
         this.name = name;
         this.price = price;
         this.description = description;
+        this.calories = calories;
         this.allergeni = allergeni;
     }
 
@@ -50,9 +53,17 @@ public class Portata {
         this.description = description;
     }
 
+    public Integer getCalories() {
+        return calories;
+    }
+
+    public void setCalories(Integer calories) {
+        this.calories = calories;
+    }
 
     public void printInfoPortata(){
-        System.out.println(ColorEnum.GREEN.getAnsiCode()+getName() + " " + ColorEnum.PURPLE.getAnsiCode()+getPrice()+"€" + "\n" + ColorEnum.CYAN.getAnsiCode()+getDescription());
+        System.out.println(ColorEnum.GREEN.getAnsiCode()+getName() + " " + ColorEnum.PURPLE.getAnsiCode()+getPrice()+"€" + "\n" + ColorEnum.CYAN.getAnsiCode()+getDescription() + " || " +
+                ColorEnum.BLUE.getAnsiCode() + "Calorie: " + getCalories());
 
         if (!allergeni.isEmpty()){
             System.out.println(ColorEnum.YELLOW.getAnsiCode() + ALLERGENI + " " + ColorEnum.RED.getAnsiCode()+ allergeni);

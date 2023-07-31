@@ -5,8 +5,8 @@ import java.util.List;
 public class SecondoPiatto extends Portata{
     private String origineDellaCarne;
 
-    public SecondoPiatto(String name, Double price, String description, String origineDellaCarne, List<AllergeniEnum> allergeni) {
-        super(name, price, description, allergeni);
+    public SecondoPiatto(String name, double price, String description, String origineDellaCarne, Integer calories, List<AllergeniEnum> allergeni) {
+        super(name, price, description, calories, allergeni);
         this.origineDellaCarne = origineDellaCarne;
     }
 
