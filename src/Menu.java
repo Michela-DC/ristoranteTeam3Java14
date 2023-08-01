@@ -5,15 +5,26 @@ import java.util.List;
 public class Menu {
 
 
+
+
+    //inserito la porta nel menu
     private List<Portata> listaPortate;
+
+
     private String title;
     private String description;
+
+
+
 
     public Menu(String title, String description) {
         this.title = title;
         this.description = description;
         listaPortate = new ArrayList<>();
     }
+
+
+
 
     public void aggiungiPortata(Portata portata) {
         listaPortate.add(portata);
@@ -27,7 +38,11 @@ public class Menu {
 
     {
         System.out.println(title + "\n"+description+"\n" );
+
+        //???
         System.out.println(ColorEnum.WHITE.getAnsiCode()+"\nANTIPASTI: ");
+
+
         for (Portata p : listaPortate) {
             if (p instanceof Antipasti) {
                 p.printInfoPortata();

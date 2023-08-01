@@ -3,6 +3,7 @@ import java.util.List;
 public class Main {
     public static void main(String[] args) {
 
+
         Menu menu = new Menu("RISTORANTE GLI ORSI BRUNI", "Contemporary and classic italian cuisine");
 
         
@@ -63,6 +64,9 @@ public class Main {
         Portata pannaCotta = new Dessert("Panna Cotta", 4.50, "Panna cotta con succo di fragole fresche frullate", 400, List.of());
         Portata cheesecake = new Dessert("Cheescake al Pistacchio", 8.90, "Fetta di Cheescake al pistacchio di Bronte con base di biscotti", 650, List.of(AllergeniEnum.LATTE,AllergeniEnum.UOVA));
 
+
+
+
         menu.aggiungiPortata(sorbettoAlLimone);
         menu.aggiungiPortata(tiramisu);
         menu.aggiungiPortata(pannaCotta);
@@ -91,7 +95,7 @@ public class Main {
 
 
 
-        // Stampa di tutte le portate del menu
+        // Stampa tutte le portate del menu
         menu.stampaPortate();
     }
 }

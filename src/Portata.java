@@ -2,6 +2,10 @@ import Enumerati.ColorEnum;
 
 import java.util.List;
 
+
+
+
+//classe padre
 public class Portata {
     public static final String ALLERGENI = "Allergeni:";
     private String name;
@@ -60,6 +64,13 @@ public class Portata {
     public void setCalories(Integer calories) {
         this.calories = calories;
     }
+
+
+    /*
+    * Il metodo di stampa deve essere dentro alla classe Portata
+    *  NON dentro a Menu,
+    *  e poi le classi figlie devono fare override di quel metodo
+    * */
 
     public void printInfoPortata(){
         System.out.println(ColorEnum.GREEN.getAnsiCode()+getName() + " " + ColorEnum.PURPLE.getAnsiCode()+getPrice()+"€" + "\n" + ColorEnum.CYAN.getAnsiCode()+getDescription() + " || " +
