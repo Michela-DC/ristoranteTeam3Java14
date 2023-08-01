@@ -1,3 +1,6 @@
+package Classi;
+
+import Enumerati.AllergeniEnum;
 import Enumerati.ColorEnum;
 
 import java.util.List;
@@ -15,8 +18,6 @@ public class Portata {
     private Integer calories;
 
     //TODO usare enumerato
-
-
 
     /*
     *
@@ -37,9 +38,6 @@ public class Portata {
     public List<AllergeniEnum> getAllergeni() {
         return allergeni;
     }
-
-
-
 
     public void setAllergeni(List<AllergeniEnum> allergeni) {
         this.allergeni = allergeni;
@@ -79,8 +77,8 @@ public class Portata {
 
 
     /*
-    * Il metodo di stampa deve essere dentro alla classe Portata
-    *  NON dentro a Menu,
+    * Il metodo di stampa deve essere dentro alla classe Classi.Portata
+    *  NON dentro a Classi.Menu,
     *  e poi le classi figlie devono fare override di quel metodo
     * */
 

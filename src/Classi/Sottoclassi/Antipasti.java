@@ -1,3 +1,7 @@
+package Classi.Sottoclassi;
+
+import Classi.Portata;
+import Enumerati.AllergeniEnum;
 import Enumerati.ColorEnum;
 
 import java.util.List;

@@ -1,30 +1,22 @@
+package Classi;
+
+import Classi.Sottoclassi.*;
 import Enumerati.ColorEnum;
 
 import java.util.ArrayList;
 import java.util.List;
 public class Menu {
 
-
-
-
     //inserito la porta nel menu
     private List<Portata> listaPortate;
-
-
     private String title;
     private String description;
-
-
-
 
     public Menu(String title, String description) {
         this.title = title;
         this.description = description;
         listaPortate = new ArrayList<>();
     }
-
-
-
 
     public void aggiungiPortata(Portata portata) {
         listaPortate.add(portata);

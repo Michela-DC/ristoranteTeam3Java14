@@ -12,7 +12,7 @@ Bevande:
 - Calice di vino
 
 
-Menù PrimoPiatto:
+Menù Classi.Sottoclassi.PrimoPiatto:
 -Spaghetti alla carbonara
 -Risotto ai funghi porcini
 -Lasagne alla bolognese
@@ -21,7 +21,7 @@ Menù PrimoPiatto:
 -Tagliatelle al ragù
 
 
-Menù SecondoPiatto:
+Menù Classi.Sottoclassi.SecondoPiatto:
 - Scaloppine al limone;
 - Arrosto di maiale;
 - Bistecca alla fiorentina;
@@ -30,7 +30,7 @@ Menù SecondoPiatto:
 - Pollo alla cacciatora;
 
 
-Menù Dessert:
+Menù Classi.Sottoclassi.Dessert:
 - Sorbetto al limone;
 - Tiramisù;
 - Panna cotta;

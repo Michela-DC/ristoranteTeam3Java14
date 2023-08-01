@@ -1,3 +1,8 @@
+import Classi.Menu;
+import Classi.Portata;
+import Classi.Sottoclassi.*;
+import Enumerati.AllergeniEnum;
+
 import java.util.List;
 
 public class Main {
@@ -7,8 +12,8 @@ public class Main {
         Menu menu = new Menu("RISTORANTE GLI ORSI BRUNI", "Contemporary and classic italian cuisine");
 
         
-      // List.of() lo usiamo per creare una lista di allergeni che prendiamo da AllergeniEnum
-        //Antipasti
+      // List.of() lo usiamo per creare una lista di allergeni che prendiamo da Enumerati.AllergeniEnum
+        //Classi.Sottoclassi.Antipasti
         Portata polentinaConcia = new Antipasti("Polentina Concia" , 6.50 , "Polenta morbida al burro e fontina con sbriciolata di prosciutto crudo essicato", 800, true,  List.of(AllergeniEnum.LATTE));
         Portata tartareDiManzo = new Antipasti("Tartare di manzo" , 10.50 , "Con cremoso al pecorino, funghi pleius scottati e polvere di porcino essiccato", 700, false, List.of(AllergeniEnum.LATTE));
         Portata iNostriSpiedini = new Antipasti("I nostri spiedini" , 9.50 , "Spiedini di manzo con crema delicata all’aglio e mentuccia, spiedini di maiale , spiedini di vitello con salsa teriyaki e granella di pistacchio", 650, true, List.of());
@@ -48,17 +53,17 @@ public class Main {
         menu.aggiungiPortata(polloAllaCacciatora);
 
         //Contorni
-        Portata patateAlForno = new Contorno("Patate al forno", 7.00, "Patate cotte al forno con olio e rosmarino", 400, List.of());
-        Portata verdureGrigliate = new Contorno("Verdure grigliate", 7.20, "Melanzane, zucchine, peperoni, marinate in olio, sale, pepe, aglio e prezzemolo", 500, List.of());
-        Portata insalataMista = new Contorno("insalata mista", 6.80, "Lattuga, pomodorini, carote, uova", 500, List.of(AllergeniEnum.UOVA));
-        Portata caponata = new Contorno("Caponata", 7.50, "Melanzane, zucchine, cipolla, polpa di pomodoro, sale, olio, pepe, aceto di vino bianco, zucchero", 450, List.of());
+        Portata patateAlForno = new Contorno("Patate al forno", 7.00, "Patate cotte al forno con olio e rosmarino", 400, List.of(), false, "Patate tagliate a spicchi.");
+        Portata verdureGrigliate = new Contorno("Verdure grigliate", 7.20, "Melanzane, zucchine, peperoni, marinate in olio, sale, pepe, aglio e prezzemolo", 500, List.of(), true, "Marinatura preparata al momento.");
+        Portata insalataMista = new Contorno("Insalata mista", 6.80, "Lattuga, pomodorini, carote, uova", 500, List.of(AllergeniEnum.UOVA), true, "Due uova sode tagliate a metà.");
+        Portata caponata = new Contorno("Caponata", 7.50, "Melanzane, zucchine, cipolla, polpa di pomodoro, sale, olio, pepe, aceto di vino bianco, zucchero", 450, List.of(), false, "Servita fredda se richiesto.");
 
         menu.aggiungiPortata(patateAlForno);
         menu.aggiungiPortata(verdureGrigliate);
         menu.aggiungiPortata(insalataMista);
         menu.aggiungiPortata(caponata);
 
-        // Dessert
+        // Classi.Sottoclassi.Dessert
         Portata sorbettoAlLimone = new Dessert("Sorbetto al limone", 5.00, "Coppa di sorbetto con limoni freschi di Siracusa igp", 250, List.of(AllergeniEnum.LATTE, AllergeniEnum.UOVA));
         Portata tiramisu= new Dessert("Tiramisù", 6.00, "Fetta di tiramisù con mascarpone, savoiardi,caffè e amaretto di Saronno", 350, List.of(AllergeniEnum.LATTE,AllergeniEnum.UOVA));
         Portata pannaCotta = new Dessert("Panna Cotta", 4.50, "Panna cotta con succo di fragole fresche frullate", 400, List.of());

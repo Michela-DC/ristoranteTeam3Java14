@@ -1,3 +1,5 @@
+package Enumerati;
+
 public enum AllergeniEnum {
     FRUTTA_A_GUSCIO("frutta a guscio"),
     LATTE("latte"),
