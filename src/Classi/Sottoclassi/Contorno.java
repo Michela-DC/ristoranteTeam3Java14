@@ -32,21 +32,14 @@ public class Contorno extends Portata {
         this.note = note;
     }
 
-    public Boolean conOlioAlPeperoncino() {
-        return olioAlPeperoncino;
-    }
-
-    public String noteAggiuntive() {
-        return note;
-    }
 
     @Override
     public void printInfoPortata() {
         super.printInfoPortata();
 
-        System.out.println(ColorEnum.CYAN.getAnsiCode() + noteAggiuntive());
+        System.out.println(ColorEnum.CYAN.getAnsiCode() + getNote());
 
-        if(conOlioAlPeperoncino()){
+        if(getOlioAlPeperoncino()){
             System.out.println(ColorEnum.CYAN.getAnsiCode() + "Su richiesta condimento con olio al peperoncino.");
         }
     }
