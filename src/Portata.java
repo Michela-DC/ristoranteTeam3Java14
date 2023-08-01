@@ -15,6 +15,15 @@ public class Portata {
     private Integer calories;
 
     //TODO usare enumerato
+
+
+
+    /*
+    *
+    * Nella portata la lista di allergeni deve essere
+    * di enum e fare listaAllergeni.getDescrizione()
+    * per fare la stampa degli allergeni
+    * */
     private List<AllergeniEnum> allergeni;
 
     public Portata(String name, Double price, String description, Integer calories, List<AllergeniEnum> allergeni) {
@@ -28,6 +37,9 @@ public class Portata {
     public List<AllergeniEnum> getAllergeni() {
         return allergeni;
     }
+
+
+
 
     public void setAllergeni(List<AllergeniEnum> allergeni) {
         this.allergeni = allergeni;
@@ -73,9 +85,14 @@ public class Portata {
     * */
 
     public void printInfoPortata(){
+        //verde+ viola:prezzo + azzurro smeraldo _:descrizione
+        //blu :calorie
         System.out.println(ColorEnum.GREEN.getAnsiCode()+getName() + " " + ColorEnum.PURPLE.getAnsiCode()+getPrice()+"€" + "\n" + ColorEnum.CYAN.getAnsiCode()+getDescription() + " || " +
                 ColorEnum.BLUE.getAnsiCode() + "Calorie: " + getCalories());
 
+        /*
+        * giallo :allergeni + rosso :lista allergeni
+        * */
         if (!allergeni.isEmpty()){
             System.out.println(ColorEnum.YELLOW.getAnsiCode() + ALLERGENI + " " + ColorEnum.RED.getAnsiCode()+ allergeni);
         } else System.out.println(ColorEnum.YELLOW.getAnsiCode() + ALLERGENI + " non ci sono allergeni");
