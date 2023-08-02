@@ -2,8 +2,6 @@ package Enumerati;
 
 public enum ColorEnum {
 
-
-
     //colori enum
     RESET("\u001B[0m", "Resetta un colore usato precedentemente"),
     BLACK("\u001B[30m", "Associa il colore NERO a un valore"),

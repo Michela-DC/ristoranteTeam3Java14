@@ -25,6 +25,7 @@ private Boolean isStagionale;
     @Override
     public void printInfoPortata() {
         super.printInfoPortata();
+
         if(isStagionale){
             System.out.println(ColorEnum.CYAN.getAnsiCode() + "Prodotto con ingredienti di stagione;");
         } else System.out.println(ColorEnum.CYAN.getAnsiCode() + "Prodotto con ingredienti fuori stagione;");

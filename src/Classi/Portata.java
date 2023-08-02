@@ -5,12 +5,8 @@ import Enumerati.AllergeniEnum;
 import Enumerati.ColorEnum;
 
 import java.util.List;
-
-
-
-
 //classe padre
-public class Portata {
+    public class Portata {
     public static final String ALLERGENI = "Allergeni:";
     private String name;
     private Double price;
@@ -92,17 +88,14 @@ public class Portata {
                   if (getClass().equals(Bevanda.class)){
                       System.out.println(" ");
                        } else System.out.println("Calorie: " + getCalories());
+
                       /*
                       * giallo :allergeni + rosso :lista allergeni
                       * */
-                 if (!allergeni.isEmpty()){
-                   System.out.println(ColorEnum.YELLOW.getAnsiCode() + ALLERGENI + " " + ColorEnum.RED.getAnsiCode()+ allergeni);
-                    } else System.out.println(ColorEnum.YELLOW.getAnsiCode() + ALLERGENI + " non ci sono allergeni");
 
-
+                  if (!allergeni.isEmpty()){
+                      System.out.println(ColorEnum.YELLOW.getAnsiCode() + ALLERGENI + " " + ColorEnum.RED.getAnsiCode()+ allergeni);
+                       } else System.out.println(ColorEnum.YELLOW.getAnsiCode() + ALLERGENI + " non ci sono allergeni");
     }
-
-
-
 }
 

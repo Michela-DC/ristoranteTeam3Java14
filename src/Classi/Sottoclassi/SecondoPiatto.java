@@ -25,6 +25,7 @@ public class SecondoPiatto extends Portata {
     @Override
     public void printInfoPortata() {
         super.printInfoPortata();
+
         System.out.println(ColorEnum.CYAN.getAnsiCode() + origineDellaCarne);
     }
 }
