@@ -7,9 +7,7 @@ import Enumerati.ColorEnum;
 import java.util.List;
 
 public class Dessert extends Portata {
-
-
-  private String semiFreddo;
+    private String semiFreddo;
 
 
     public double getPercentualeZuccheri() {
@@ -28,7 +26,7 @@ private List<Dessert> desserts;
     public Dessert(String name, double price, String description, Integer calories, List<AllergeniEnum> allergeni) {
         super(name, price, description, calories, allergeni);
         this.semiFreddo=semiFreddo;
-this.percentualeZuccheri=percentualeZuccheri;
+        this.percentualeZuccheri=percentualeZuccheri;
     }
 
 
@@ -44,10 +42,8 @@ this.percentualeZuccheri=percentualeZuccheri;
     @Override
     public void printInfoPortata() {
         super.printInfoPortata();
-
-
-        System.out.println(ColorEnum.CYAN.getAnsiCode() + "Semi freddo");
-System.out.println(ColorEnum.CYAN.getAnsiCode()+ "percentuale zuccheri");
+         System.out.println(ColorEnum.CYAN.getAnsiCode() + "Semi freddo");
+          System.out.println(ColorEnum.CYAN.getAnsiCode()+ "percentuale zuccheri");
     }
 
 
