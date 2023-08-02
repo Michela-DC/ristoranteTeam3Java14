@@ -26,65 +26,44 @@ public class Menu {
         listaPortate.remove(portata);
     }
 
-    public void stampaPortate()
-
-    {
+    /**
+     * Funzione dentro il quale utilizzo il metodo stampaTitoloEInfoPortata passandogli il titolo della sezione e la classe da controllare
+     *
+     */
+    public void stampaPortate() {
         System.out.println(title + "\n"+description+"\n" );
+        stampaTitoloEInfoPortata("ANTIPASTI", Antipasti.class);
+        stampaTitoloEInfoPortata("PRIMI PIATTI", PrimoPiatto.class);
+        stampaTitoloEInfoPortata("SECONDI PIATTI", SecondoPiatto.class);
+        stampaTitoloEInfoPortata("CONTORNI", Contorno.class);
+        stampaTitoloEInfoPortata("DESSERT", Dessert.class);
+        stampaTitoloEInfoPortata("BEVANDE", Bevanda.class);
+    }
 
-        //???
-        System.out.println(ColorEnum.WHITE.getAnsiCode()+"\nANTIPASTI: ");
+    /**
+     * Metodo che riceve in input il titolo della sezione e la classe da controllare:
+     * stampa il titolo con il colore specificato dall'enum
+     * esegue for per ciclare dentro alla lista delle portate
+     * se la singola portata è un'istanza della classe passata in input allora richiama il metodo printInfoPortata() della classe padre Portata
+     *
+     * Class<\? extends Portata> classToCheck è un utilizzo dei Java generics
+     * Class è una classe già presente in Java che permette di accedere alla classe di tipo sconosciuto (ovvero il ?)
+     * il ? sta a indicare che potrebbe essere una qualsiasi classe che estende Portata - nei java generics il ? è una wildcard
+     * extends Portata mi serve per specificare che la classe ? è limitata a essere una sottoclasse di portata
+     * classToCheck è la classe che passo come input e che va al posto del ?
+     *
+     * @param titolo é il titolo della sezione delle portate che vengono poi stampate sotto a esso
+     * @param classToCheck è la classe da controllare per capire quando stampare il titolo giusto
+     */
 
+    public void stampaTitoloEInfoPortata(String titolo, Class<? extends Portata> classToCheck) {
+        System.out.println(ColorEnum.WHITE.getAnsiCode()+ "\n" + titolo + ": ");
 
         for (Portata p : listaPortate) {
-            if (p instanceof Antipasti) {
+            if (classToCheck.isInstance(p)) {
                 p.printInfoPortata();
                 System.out.println("\n");
             }
         }
-
-        System.out.println(ColorEnum.WHITE.getAnsiCode()+"\nPRIMI PIATTI: ");
-        for (Portata p : listaPortate) {
-            if (p instanceof PrimoPiatto) {
-                p.printInfoPortata();
-                System.out.println("\n");
-            }
-        }
-
-
-        System.out.println(ColorEnum.WHITE.getAnsiCode()+"\nSECONDI PIATTI: ");
-        for (Portata p : listaPortate) {
-            if (p instanceof SecondoPiatto) {
-                p.printInfoPortata();
-                System.out.println("\n");
-            }
-        }
-
-
-        System.out.println(ColorEnum.WHITE.getAnsiCode()+"\nCONTORNI: ");
-        for (Portata p : listaPortate) {
-            if (p instanceof Contorno) {
-                p.printInfoPortata();
-                System.out.println("\n");
-            }
-        }
-
-
-        System.out.println(ColorEnum.WHITE.getAnsiCode()+ "\nDESSERT: ");
-        for (Portata p : listaPortate) {
-            if (p instanceof Dessert) {
-                p.printInfoPortata();
-                System.out.println("\n");
-            }
-        }
-
-
-        System.out.println(ColorEnum.WHITE.getAnsiCode()+ "\nBEVANDE: ");
-        for (Portata p : listaPortate) {
-            if (p instanceof Bevanda) {
-                p.printInfoPortata();
-                System.out.println("\n");
-            }
-        }
-
     }
 }

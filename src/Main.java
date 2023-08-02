@@ -8,11 +8,9 @@ import java.util.List;
 public class Main {
     public static void main(String[] args) {
 
-
         Menu menu = new Menu("RISTORANTE GLI ORSI BRUNI", "Contemporary and classic italian cuisine");
-
         
-      // List.of() lo usiamo per creare una lista di allergeni che prendiamo da Enumerati.AllergeniEnum
+        // List.of() lo usiamo per creare una lista di allergeni che prendiamo da Enumerati.AllergeniEnum
         //Antipasti
         Portata polentinaConcia = new Antipasti("Polentina Concia" , 6.50 , "Polenta morbida al burro e fontina con sbriciolata di prosciutto crudo essicato", 800, true,  List.of(AllergeniEnum.LATTE));
         Portata tartareDiManzo = new Antipasti("Tartare di manzo" , 10.50 , "Con cremoso al pecorino, funghi pleius scottati e polvere di porcino essiccato", 700, false, List.of(AllergeniEnum.LATTE));
@@ -95,8 +93,6 @@ public class Main {
         menu.aggiungiPortata(birraPiccola);
         menu.aggiungiPortata(birraMedia);
         menu.aggiungiPortata(caliceVino);
-
-
 
         // Stampa tutte le portate del menu
         menu.stampaPortate();

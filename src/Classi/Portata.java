@@ -14,8 +14,6 @@ import java.util.List;
 
     private Integer calories;
 
-    //TODO usare enumerato
-
     /*
     *
     * Nella portata la lista di allergeni deve essere
@@ -83,19 +81,19 @@ import java.util.List;
         //verde+ viola:prezzo + azzurro smeraldo _:descrizione
         //blu :calorie
         System.out.print(ColorEnum.GREEN.getAnsiCode()+getName() + " " + ColorEnum.PURPLE.getAnsiCode()+getPrice()+"€" + "\n" + ColorEnum.CYAN.getAnsiCode()+getDescription() + " || " +
-                ColorEnum.BLUE.getAnsiCode());
+            ColorEnum.BLUE.getAnsiCode());
 
-                  if (getClass().equals(Bevanda.class)){
-                      System.out.println(" ");
-                       } else System.out.println("Calorie: " + getCalories());
+          if (getClass().equals(Bevanda.class)){
+              System.out.println(" ");
+          } else System.out.println("Calorie: " + getCalories());
 
-                      /*
-                      * giallo :allergeni + rosso :lista allergeni
-                      * */
+              /*
+              * giallo :allergeni + rosso :lista allergeni
+              * */
 
-                  if (!allergeni.isEmpty()){
-                      System.out.println(ColorEnum.YELLOW.getAnsiCode() + ALLERGENI + " " + ColorEnum.RED.getAnsiCode()+ allergeni);
-                       } else System.out.println(ColorEnum.YELLOW.getAnsiCode() + ALLERGENI + " non ci sono allergeni");
+          if (!allergeni.isEmpty()){
+              System.out.println(ColorEnum.YELLOW.getAnsiCode() + ALLERGENI + " " + ColorEnum.RED.getAnsiCode()+ allergeni);
+          } else System.out.println(ColorEnum.YELLOW.getAnsiCode() + ALLERGENI + " non ci sono allergeni");
     }
 }
 

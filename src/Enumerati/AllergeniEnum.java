@@ -10,13 +10,8 @@ public enum AllergeniEnum {
     PESCE("pesce"),
     CROSTACEI("crostacei");
 
-
-
     private String descrizione;
 
-
-
-    //?????
     AllergeniEnum(String descrizione){
         this.descrizione = descrizione;
     }
