@@ -1,5 +1,6 @@
 package Classi;
 
+import Classi.Sottoclassi.Bevanda;
 import Enumerati.AllergeniEnum;
 import Enumerati.ColorEnum;
 
@@ -85,15 +86,18 @@ public class Portata {
     public void printInfoPortata(){
         //verde+ viola:prezzo + azzurro smeraldo _:descrizione
         //blu :calorie
-        System.out.println(ColorEnum.GREEN.getAnsiCode()+getName() + " " + ColorEnum.PURPLE.getAnsiCode()+getPrice()+"€" + "\n" + ColorEnum.CYAN.getAnsiCode()+getDescription() + " || " +
-                ColorEnum.BLUE.getAnsiCode() + "Calorie: " + getCalories());
+        System.out.print(ColorEnum.GREEN.getAnsiCode()+getName() + " " + ColorEnum.PURPLE.getAnsiCode()+getPrice()+"€" + "\n" + ColorEnum.CYAN.getAnsiCode()+getDescription() + " || " +
+                ColorEnum.BLUE.getAnsiCode());
 
-        /*
-        * giallo :allergeni + rosso :lista allergeni
-        * */
-        if (!allergeni.isEmpty()){
-            System.out.println(ColorEnum.YELLOW.getAnsiCode() + ALLERGENI + " " + ColorEnum.RED.getAnsiCode()+ allergeni);
-        } else System.out.println(ColorEnum.YELLOW.getAnsiCode() + ALLERGENI + " non ci sono allergeni");
+                  if (getClass().equals(Bevanda.class)){
+                      System.out.println(" ");
+                       } else System.out.println("Calorie: " + getCalories());
+                      /*
+                      * giallo :allergeni + rosso :lista allergeni
+                      * */
+                 if (!allergeni.isEmpty()){
+                   System.out.println(ColorEnum.YELLOW.getAnsiCode() + ALLERGENI + " " + ColorEnum.RED.getAnsiCode()+ allergeni);
+                    } else System.out.println(ColorEnum.YELLOW.getAnsiCode() + ALLERGENI + " non ci sono allergeni");
 
 
     }
