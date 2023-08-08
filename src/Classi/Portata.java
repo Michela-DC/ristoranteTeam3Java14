@@ -1,22 +1,18 @@
+package Classi;
+
+import Classi.Sottoclassi.Bevanda;
+import Enumerati.AllergeniEnum;
 import Enumerati.ColorEnum;
 
 import java.util.List;
-
-
-
-
 //classe padre
-public class Portata {
+    public class Portata {
     public static final String ALLERGENI = "Allergeni:";
     private String name;
     private Double price;
     private String description;
 
     private Integer calories;
-
-    //TODO usare enumerato
-
-
 
     /*
     *
@@ -37,9 +33,6 @@ public class Portata {
     public List<AllergeniEnum> getAllergeni() {
         return allergeni;
     }
-
-
-
 
     public void setAllergeni(List<AllergeniEnum> allergeni) {
         this.allergeni = allergeni;
@@ -79,28 +72,28 @@ public class Portata {
 
 
     /*
-    * Il metodo di stampa deve essere dentro alla classe Portata
-    *  NON dentro a Menu,
+    * Il metodo di stampa deve essere dentro alla classe Classi.Portata
+    *  NON dentro a Classi.Menu,
     *  e poi le classi figlie devono fare override di quel metodo
     * */
 
     public void printInfoPortata(){
         //verde+ viola:prezzo + azzurro smeraldo _:descrizione
         //blu :calorie
-        System.out.println(ColorEnum.GREEN.getAnsiCode()+getName() + " " + ColorEnum.PURPLE.getAnsiCode()+getPrice()+"€" + "\n" + ColorEnum.CYAN.getAnsiCode()+getDescription() + " || " +
-                ColorEnum.BLUE.getAnsiCode() + "Calorie: " + getCalories());
+        System.out.print(ColorEnum.GREEN.getAnsiCode()+getName() + " " + ColorEnum.PURPLE.getAnsiCode()+getPrice()+"€" + "\n" + ColorEnum.CYAN.getAnsiCode()+getDescription() + " || " +
+            ColorEnum.BLUE.getAnsiCode());
 
-        /*
-        * giallo :allergeni + rosso :lista allergeni
-        * */
-        if (!allergeni.isEmpty()){
-            System.out.println(ColorEnum.YELLOW.getAnsiCode() + ALLERGENI + " " + ColorEnum.RED.getAnsiCode()+ allergeni);
-        } else System.out.println(ColorEnum.YELLOW.getAnsiCode() + ALLERGENI + " non ci sono allergeni");
+          if (getClass().equals(Bevanda.class)){
+              System.out.println(" ");
+          } else System.out.println("Calorie: " + getCalories());
 
+              /*
+              * giallo :allergeni + rosso :lista allergeni
+              * */
 
+          if (!allergeni.isEmpty()){
+              System.out.println(ColorEnum.YELLOW.getAnsiCode() + ALLERGENI + " " + ColorEnum.RED.getAnsiCode()+ allergeni);
+          } else System.out.println(ColorEnum.YELLOW.getAnsiCode() + ALLERGENI + " non ci sono allergeni");
     }
-
-
-
 }
 

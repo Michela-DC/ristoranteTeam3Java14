@@ -2,8 +2,6 @@ package Enumerati;
 
 public enum ColorEnum {
 
-
-
     //colori enum
     RESET("\u001B[0m", "Resetta un colore usato precedentemente"),
     BLACK("\u001B[30m", "Associa il colore NERO a un valore"),
@@ -18,8 +16,6 @@ public enum ColorEnum {
 
     private String ansiCode;
     private String descrizione;
-
-
     public String getAnsiCode() {
         return ansiCode;
     }

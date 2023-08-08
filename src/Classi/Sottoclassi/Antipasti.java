@@ -1,3 +1,7 @@
+package Classi.Sottoclassi;
+
+import Classi.Portata;
+import Enumerati.AllergeniEnum;
 import Enumerati.ColorEnum;
 
 import java.util.List;
@@ -22,9 +26,8 @@ public class Antipasti extends Portata {
     public void printInfoPortata() {
         super.printInfoPortata();
         if(isProduzionePropria){
-            System.out.println("\n" + ColorEnum.CYAN.getAnsiCode() + "Prodotto di nostra produzione");
-        } else System.out.println("\n" + ColorEnum.CYAN.getAnsiCode() + "Prodotto non di nostra produzione");
-
+            System.out.println(ColorEnum.CYAN.getAnsiCode() + "Prodotto di nostra produzione");
+        } else System.out.println(ColorEnum.CYAN.getAnsiCode() + "Prodotto non di nostra produzione");
 
 
     }

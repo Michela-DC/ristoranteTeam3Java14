@@ -1,13 +1,16 @@
+import Classi.Menu;
+import Classi.Portata;
+import Classi.Sottoclassi.*;
+import Enumerati.AllergeniEnum;
+
 import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
 
-
         Menu menu = new Menu("RISTORANTE GLI ORSI BRUNI", "Contemporary and classic italian cuisine");
-
         
-      // List.of() lo usiamo per creare una lista di allergeni che prendiamo da AllergeniEnum
+        // List.of() lo usiamo per creare una lista di allergeni che prendiamo da Enumerati.AllergeniEnum
         //Antipasti
         Portata polentinaConcia = new Antipasti("Polentina Concia" , 6.50 , "Polenta morbida al burro e fontina con sbriciolata di prosciutto crudo essicato", 800, true,  List.of(AllergeniEnum.LATTE));
         Portata tartareDiManzo = new Antipasti("Tartare di manzo" , 10.50 , "Con cremoso al pecorino, funghi pleius scottati e polvere di porcino essiccato", 700, false, List.of(AllergeniEnum.LATTE));
@@ -34,7 +37,7 @@ public class Main {
         menu.aggiungiPortata(penneAllArrabbiata);
         menu.aggiungiPortata(pappardelleAlCinghiale);
 
-        // Secondi
+        //Secondi
         Portata scaloppineAlLimone = new SecondoPiatto("Scaloppine al limone", 12.00, "Fettine di vitello  battute e poi cotte in padella con succo di limone, burro e prezzemolo", "Allevamento biologico", 500, List.of());
         Portata arrostoDiMaiale = new SecondoPiatto("Arrosto di maiale", 14.00, "Arrosto di delizioso filetto di maialino nero","Allevamento biologico", 550, List.of());
         Portata bisteccaAllaFiorentina = new SecondoPiatto("Bistecca alla fiorentina", 24.00, "Bistecca di carne marchigiana con taglio da fiorentina", "Allevamento locale", 600, List.of());
@@ -48,23 +51,21 @@ public class Main {
         menu.aggiungiPortata(polloAllaCacciatora);
 
         //Contorni
-        Portata patateAlForno = new Contorno("Patate al forno", 7.00, "Patate cotte al forno con olio e rosmarino", 400, List.of());
-        Portata verdureGrigliate = new Contorno("Verdure grigliate", 7.20, "Melanzane, zucchine, peperoni, marinate in olio, sale, pepe, aglio e prezzemolo", 500, List.of());
-        Portata insalataMista = new Contorno("insalata mista", 6.80, "Lattuga, pomodorini, carote, uova", 500, List.of(AllergeniEnum.UOVA));
-        Portata caponata = new Contorno("Caponata", 7.50, "Melanzane, zucchine, cipolla, polpa di pomodoro, sale, olio, pepe, aceto di vino bianco, zucchero", 450, List.of());
+        Portata patateAlForno = new Contorno("Patate al forno", 7.00, "Patate cotte al forno con olio e rosmarino", 400, List.of(), false, "Patate tagliate a spicchi.");
+        Portata verdureGrigliate = new Contorno("Verdure grigliate", 7.20, "Melanzane, zucchine, peperoni, marinate in olio, sale, pepe, aglio e prezzemolo", 500, List.of(), true, "Marinatura preparata al momento.");
+        Portata insalataMista = new Contorno("Insalata mista", 6.80, "Lattuga, pomodorini, carote, uova", 500, List.of(AllergeniEnum.UOVA), true, "Due uova sode tagliate a metà.");
+        Portata caponata = new Contorno("Caponata", 7.50, "Melanzane, zucchine, cipolla, polpa di pomodoro, sale, olio, pepe, aceto di vino bianco, zucchero", 450, List.of(), false, "Servita fredda se richiesto.");
 
         menu.aggiungiPortata(patateAlForno);
         menu.aggiungiPortata(verdureGrigliate);
         menu.aggiungiPortata(insalataMista);
         menu.aggiungiPortata(caponata);
 
-        // Dessert
+        //Dessert
         Portata sorbettoAlLimone = new Dessert("Sorbetto al limone", 5.00, "Coppa di sorbetto con limoni freschi di Siracusa igp", 250, List.of(AllergeniEnum.LATTE, AllergeniEnum.UOVA));
         Portata tiramisu= new Dessert("Tiramisù", 6.00, "Fetta di tiramisù con mascarpone, savoiardi,caffè e amaretto di Saronno", 350, List.of(AllergeniEnum.LATTE,AllergeniEnum.UOVA));
         Portata pannaCotta = new Dessert("Panna Cotta", 4.50, "Panna cotta con succo di fragole fresche frullate", 400, List.of());
         Portata cheesecake = new Dessert("Cheescake al Pistacchio", 8.90, "Fetta di Cheescake al pistacchio di Bronte con base di biscotti", 650, List.of(AllergeniEnum.LATTE,AllergeniEnum.UOVA));
-
-
 
 
         menu.aggiungiPortata(sorbettoAlLimone);
@@ -72,7 +73,7 @@ public class Main {
         menu.aggiungiPortata(pannaCotta);
         menu.aggiungiPortata(cheesecake);
 
-        // Bevande
+        //Bevande
         Portata acquaNaturale = new Bevanda("Acqua naturale", 3.00, "1l", null, 0, List.of());
         Portata acquaFrizzante = new Bevanda("Acqua frizzante", 3.00, "1l", null, 0, List.of());
         Portata cocaCola = new Bevanda("Coca Cola", 3.5, "lattina 33cl", null, 120, List.of());
@@ -92,8 +93,6 @@ public class Main {
         menu.aggiungiPortata(birraPiccola);
         menu.aggiungiPortata(birraMedia);
         menu.aggiungiPortata(caliceVino);
-
-
 
         // Stampa tutte le portate del menu
         menu.stampaPortate();
