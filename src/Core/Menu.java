@@ -1,6 +1,6 @@
-package Classi;
+package Core;
 
-import Classi.Sottoclassi.*;
+import PortateEntity.*;
 import Enumerati.ColorEnum;
 
 import java.util.ArrayList;

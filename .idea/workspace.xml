@@ -6,11 +6,15 @@
   <component name="ChangeListManager">
     <list default="true" id="376170a4-0203-42c8-a5bb-84a8efa9c03c" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Classi/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Classi/Menu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Classi/Portata.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Classi/Portata.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Classi/Sottoclassi/Antipasti.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Classi/Sottoclassi/Antipasti.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Enumerati/AllergeniEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Enumerati/AllergeniEnum.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Enumerati/ColorEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Enumerati/ColorEnum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/menu.txt" beforeDir="false" afterPath="$PROJECT_DIR$/menu.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Classi/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Core/Menu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Classi/Portata.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Core/Portata.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Classi/Sottoclassi/Antipasti.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PortateEntity/Antipasti.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Classi/Sottoclassi/Bevanda.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PortateEntity/Bevanda.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Classi/Sottoclassi/Contorno.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PortateEntity/Contorno.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Classi/Sottoclassi/Dessert.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PortateEntity/Dessert.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Classi/Sottoclassi/PrimoPiatto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PortateEntity/PrimoPiatto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Classi/Sottoclassi/SecondoPiatto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PortateEntity/SecondoPiatto.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -43,17 +47,18 @@
     <option name="showLibraryContents" value="true" />
     <option name="showScratchesAndConsoles" value="false" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;develop&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/irr3f/Desktop/ristoranteTeam3Java14&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "develop",
+    "last_opened_file_path": "/Users/michela.delconte/Library/Mobile Documents/com~apple~CloudDocs/Develhope/JAVA/ristoranteTeam3Java14",
+    "project.structure.last.edited": "Libraries",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.externalTools"
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />

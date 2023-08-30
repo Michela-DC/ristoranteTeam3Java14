@@ -1,6 +1,6 @@
-package Classi;
+package Core;
 
-import Classi.Sottoclassi.Bevanda;
+import PortateEntity.Bevanda;
 import Enumerati.AllergeniEnum;
 import Enumerati.ColorEnum;
 

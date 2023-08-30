@@ -1,6 +1,6 @@
-import Classi.Menu;
-import Classi.Portata;
-import Classi.Sottoclassi.*;
+import Core.Menu;
+import Core.Portata;
+import PortateEntity.*;
 import Enumerati.AllergeniEnum;
 
 import java.util.List;

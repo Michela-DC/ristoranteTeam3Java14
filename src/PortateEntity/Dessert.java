@@ -1,18 +1,11 @@
-package Classi.Sottoclassi;
+package PortateEntity;
 
-import Classi.Portata;
+import Core.Portata;
 import Enumerati.AllergeniEnum;
 import Enumerati.ColorEnum;
 
 import java.util.List;
 
-
-
-/*
-* creare
-*
-*
-* */
 public class Dessert extends Portata {
     private String semiFreddo;
 
