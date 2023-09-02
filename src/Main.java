@@ -101,6 +101,7 @@ public class Main {
         // Stampa tutte le portate del menu
         menu.stampaPortate();
 
+        // parte di connessione al DB
         Utility dao = new Utility();
 
         try {

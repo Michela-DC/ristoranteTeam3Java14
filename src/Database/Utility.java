@@ -16,7 +16,7 @@ public class Utility {
     private static final Properties properties = new Properties();
 
     static {
-        try (FileInputStream fileInputStream = new FileInputStream("config.properties")) {
+        try (FileInputStream fileInputStream = new FileInputStream(".config.properties")) {
             properties.load(fileInputStream);
         } catch (IOException e) {
             e.printStackTrace();
