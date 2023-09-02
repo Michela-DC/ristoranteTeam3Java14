@@ -1,12 +1,16 @@
 import Core.Menu;
 import Core.Portata;
+import Database.Utility;
 import PortateEntity.*;
 import Enumerati.AllergeniEnum;
 
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
 import java.util.List;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws SQLException {
 
         Menu menu = new Menu("RISTORANTE GLI ORSI BRUNI", "Contemporary and classic italian cuisine");
         
@@ -96,6 +100,14 @@ public class Main {
 
         // Stampa tutte le portate del menu
         menu.stampaPortate();
+
+        Utility dao = new Utility();
+
+        try {
+            dao.insertMenu(menu);
+        }catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
     }
 }
 

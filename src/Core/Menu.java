@@ -18,6 +18,26 @@ public class Menu {
         listaPortate = new ArrayList<>();
     }
 
+    public List<Portata> getListaPortate() {
+        return listaPortate;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
     public void aggiungiPortata(Portata portata) {
         listaPortate.add(portata);
     }
