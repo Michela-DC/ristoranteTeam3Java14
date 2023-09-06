@@ -15,64 +15,13 @@ CREATE SCHEMA IF NOT EXISTS `ristoranteJava` DEFAULT CHARACTER SET utf8 ;
 USE `ristoranteJava` ;
 
 -- -----------------------------------------------------
--- Table `ristoranteJava`.`Antipasto`
+-- Table `ristoranteJava`.`Menu`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `ristoranteJava`.`Antipasto` (
-  `idAntipasto` INT NOT NULL,
-  `is_produzione_propria` TINYINT NULL,
-  PRIMARY KEY (`idAntipasto`))
-ENGINE = InnoDB;
-
-
--- -----------------------------------------------------
--- Table `ristoranteJava`.`Bevanda`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `ristoranteJava`.`Bevanda` (
-  `idBevanda` INT NOT NULL,
-  `tasso_alcolico` DECIMAL NULL,
-  PRIMARY KEY (`idBevanda`))
-ENGINE = InnoDB;
-
-
--- -----------------------------------------------------
--- Table `ristoranteJava`.`Contorno`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `ristoranteJava`.`Contorno` (
-  `idContorno` INT NOT NULL,
-  `olio_al_peperoncino` TINYINT NULL,
-  `note` VARCHAR(255) NULL,
-  PRIMARY KEY (`idContorno`))
-ENGINE = InnoDB;
-
-
--- -----------------------------------------------------
--- Table `ristoranteJava`.`Dessert`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `ristoranteJava`.`Dessert` (
-  `idDessert` INT NOT NULL,
-  `semifreddo` VARCHAR(45) NULL,
-  `percentuale_zuccheri` TINYINT NULL,
-  PRIMARY KEY (`idDessert`))
-ENGINE = InnoDB;
-
-
--- -----------------------------------------------------
--- Table `ristoranteJava`.`Primo`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `ristoranteJava`.`Primo` (
-  `idPrimo` INT NOT NULL,
-  `is_stagionale` TINYINT NULL,
-  PRIMARY KEY (`idPrimo`))
-ENGINE = InnoDB;
-
-
--- -----------------------------------------------------
--- Table `ristoranteJava`.`Secondo`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `ristoranteJava`.`Secondo` (
-  `idSecondo` INT NOT NULL,
-  `origine_della_carne` VARCHAR(45) NULL,
-  PRIMARY KEY (`idSecondo`))
+CREATE TABLE IF NOT EXISTS `ristoranteJava`.`Menu` (
+  `idMenu` INT NOT NULL AUTO_INCREMENT,
+  `titolo` VARCHAR(45) NOT NULL,
+  `descrizione` VARCHAR(255) NULL,
+  PRIMARY KEY (`idMenu`))
 ENGINE = InnoDB;
 
 
@@ -85,65 +34,122 @@ CREATE TABLE IF NOT EXISTS `ristoranteJava`.`Portata` (
   `prezzo` DECIMAL NOT NULL,
   `descrizione` VARCHAR(255) NOT NULL,
   `calorie` INT NOT NULL,
-  `Antipasto_idAntipasto` INT NOT NULL,
-  `Bevanda_idBevanda` INT NOT NULL,
-  `Contorno_idContorno` INT NOT NULL,
-  `Dessert_idDessert` INT NOT NULL,
-  `Primo_idPrimo` INT NOT NULL,
-  `Secondo_idSecondo` INT NOT NULL,
-  PRIMARY KEY (`idPortata`),
-  INDEX `fk_Portata_Antipasti_idx` (`Antipasto_idAntipasto` ASC) VISIBLE,
-  INDEX `fk_Portata_Bevanda1_idx` (`Bevanda_idBevanda` ASC) VISIBLE,
-  INDEX `fk_Portata_Contorno1_idx` (`Contorno_idContorno` ASC) VISIBLE,
-  INDEX `fk_Portata_Dessert1_idx` (`Dessert_idDessert` ASC) VISIBLE,
-  INDEX `fk_Portata_Primi1_idx` (`Primo_idPrimo` ASC) VISIBLE,
-  INDEX `fk_Portata_Secondo1_idx` (`Secondo_idSecondo` ASC) VISIBLE,
-  CONSTRAINT `fk_Portata_Antipasti`
-    FOREIGN KEY (`Antipasto_idAntipasto`)
-    REFERENCES `ristoranteJava`.`Antipasto` (`idAntipasto`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
-  CONSTRAINT `fk_Portata_Bevanda1`
-    FOREIGN KEY (`Bevanda_idBevanda`)
-    REFERENCES `ristoranteJava`.`Bevanda` (`idBevanda`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
-  CONSTRAINT `fk_Portata_Contorno1`
-    FOREIGN KEY (`Contorno_idContorno`)
-    REFERENCES `ristoranteJava`.`Contorno` (`idContorno`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
-  CONSTRAINT `fk_Portata_Dessert1`
-    FOREIGN KEY (`Dessert_idDessert`)
-    REFERENCES `ristoranteJava`.`Dessert` (`idDessert`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
-  CONSTRAINT `fk_Portata_Primi1`
-    FOREIGN KEY (`Primo_idPrimo`)
-    REFERENCES `ristoranteJava`.`Primo` (`idPrimo`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
-  CONSTRAINT `fk_Portata_Secondo1`
-    FOREIGN KEY (`Secondo_idSecondo`)
-    REFERENCES `ristoranteJava`.`Secondo` (`idSecondo`)
+  `Menu_idMenu` INT NOT NULL,
+  PRIMARY KEY (`idPortata`, `Menu_idMenu`),
+  INDEX `fk_Portata_Menu_idx` (`Menu_idMenu` ASC) VISIBLE,
+  CONSTRAINT `fk_Portata_Menu`
+    FOREIGN KEY (`Menu_idMenu`)
+    REFERENCES `ristoranteJava`.`Menu` (`idMenu`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `ristoranteJava`.`Menu`
+-- Table `ristoranteJava`.`Antipasto`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `ristoranteJava`.`Menu` (
-  `idMenu` INT NOT NULL AUTO_INCREMENT,
-  `titolo` VARCHAR(45) NOT NULL,
-  `descrizione` VARCHAR(255) NULL,
+CREATE TABLE IF NOT EXISTS `ristoranteJava`.`Antipasto` (
+  `idAntipasto` INT NOT NULL,
+  `is_produzione_propria` TINYINT NULL,
   `Portata_idPortata` INT NOT NULL,
-  PRIMARY KEY (`idMenu`),
-  INDEX `fk_Menu_Portata1_idx` (`Portata_idPortata` ASC) VISIBLE,
-  CONSTRAINT `fk_Menu_Portata1`
-    FOREIGN KEY (`Portata_idPortata`)
-    REFERENCES `ristoranteJava`.`Portata` (`idPortata`)
+  `Portata_Menu_idMenu` INT NOT NULL,
+  PRIMARY KEY (`idAntipasto`, `Portata_idPortata`, `Portata_Menu_idMenu`),
+  INDEX `fk_Antipasto_Portata1_idx` (`Portata_idPortata` ASC, `Portata_Menu_idMenu` ASC) VISIBLE,
+  CONSTRAINT `fk_Antipasto_Portata1`
+    FOREIGN KEY (`Portata_idPortata` , `Portata_Menu_idMenu`)
+    REFERENCES `ristoranteJava`.`Portata` (`idPortata` , `Menu_idMenu`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `ristoranteJava`.`Bevanda`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `ristoranteJava`.`Bevanda` (
+  `idBevanda` INT NOT NULL,
+  `tasso_alcolico` DECIMAL NULL,
+  `Portata_idPortata` INT NOT NULL,
+  `Portata_Menu_idMenu` INT NOT NULL,
+  PRIMARY KEY (`idBevanda`, `Portata_idPortata`, `Portata_Menu_idMenu`),
+  INDEX `fk_Bevanda_Portata1_idx` (`Portata_idPortata` ASC, `Portata_Menu_idMenu` ASC) VISIBLE,
+  CONSTRAINT `fk_Bevanda_Portata1`
+    FOREIGN KEY (`Portata_idPortata` , `Portata_Menu_idMenu`)
+    REFERENCES `ristoranteJava`.`Portata` (`idPortata` , `Menu_idMenu`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `ristoranteJava`.`Contorno`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `ristoranteJava`.`Contorno` (
+  `idContorno` INT NOT NULL,
+  `olio_al_peperoncino` TINYINT NULL,
+  `note` VARCHAR(255) NULL,
+  `Portata_idPortata` INT NOT NULL,
+  `Portata_Menu_idMenu` INT NOT NULL,
+  PRIMARY KEY (`idContorno`, `Portata_idPortata`, `Portata_Menu_idMenu`),
+  INDEX `fk_Contorno_Portata1_idx` (`Portata_idPortata` ASC, `Portata_Menu_idMenu` ASC) VISIBLE,
+  CONSTRAINT `fk_Contorno_Portata1`
+    FOREIGN KEY (`Portata_idPortata` , `Portata_Menu_idMenu`)
+    REFERENCES `ristoranteJava`.`Portata` (`idPortata` , `Menu_idMenu`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `ristoranteJava`.`Dessert`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `ristoranteJava`.`Dessert` (
+  `idDessert` INT NOT NULL,
+  `semifreddo` VARCHAR(45) NULL,
+  `percentuale_zuccheri` TINYINT NULL,
+  `Portata_idPortata` INT NOT NULL,
+  `Portata_Menu_idMenu` INT NOT NULL,
+  PRIMARY KEY (`idDessert`, `Portata_idPortata`, `Portata_Menu_idMenu`),
+  INDEX `fk_Dessert_Portata1_idx` (`Portata_idPortata` ASC, `Portata_Menu_idMenu` ASC) VISIBLE,
+  CONSTRAINT `fk_Dessert_Portata1`
+    FOREIGN KEY (`Portata_idPortata` , `Portata_Menu_idMenu`)
+    REFERENCES `ristoranteJava`.`Portata` (`idPortata` , `Menu_idMenu`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `ristoranteJava`.`Primo`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `ristoranteJava`.`Primo` (
+  `idPrimo` INT NOT NULL,
+  `is_stagionale` TINYINT NULL,
+  `Portata_idPortata` INT NOT NULL,
+  `Portata_Menu_idMenu` INT NOT NULL,
+  PRIMARY KEY (`idPrimo`, `Portata_idPortata`, `Portata_Menu_idMenu`),
+  INDEX `fk_Primo_Portata1_idx` (`Portata_idPortata` ASC, `Portata_Menu_idMenu` ASC) VISIBLE,
+  CONSTRAINT `fk_Primo_Portata1`
+    FOREIGN KEY (`Portata_idPortata` , `Portata_Menu_idMenu`)
+    REFERENCES `ristoranteJava`.`Portata` (`idPortata` , `Menu_idMenu`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `ristoranteJava`.`Secondo`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `ristoranteJava`.`Secondo` (
+  `idSecondo` INT NOT NULL,
+  `origine_della_carne` VARCHAR(45) NULL,
+  `Portata_idPortata` INT NOT NULL,
+  `Portata_Menu_idMenu` INT NOT NULL,
+  PRIMARY KEY (`idSecondo`, `Portata_idPortata`, `Portata_Menu_idMenu`),
+  INDEX `fk_Secondo_Portata1_idx` (`Portata_idPortata` ASC, `Portata_Menu_idMenu` ASC) VISIBLE,
+  CONSTRAINT `fk_Secondo_Portata1`
+    FOREIGN KEY (`Portata_idPortata` , `Portata_Menu_idMenu`)
+    REFERENCES `ristoranteJava`.`Portata` (`idPortata` , `Menu_idMenu`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
