@@ -14,6 +14,8 @@ import java.util.List;
 
     private Integer calories;
 
+    private Integer idMenu;
+
     /*
     *
     * Nella portata la lista di allergeni deve essere
@@ -21,6 +23,15 @@ import java.util.List;
     * per fare la stampa degli allergeni
     * */
     private List<AllergeniEnum> allergeni;
+
+    public Portata(String name, Double price, String description, Integer calories, List<AllergeniEnum> allergeni, Integer idMenu) {
+        this.name = name;
+        this.price = price;
+        this.description = description;
+        this.calories = calories;
+        this.allergeni = allergeni;
+        this.idMenu = idMenu;
+    }
 
     public Portata(String name, Double price, String description, Integer calories, List<AllergeniEnum> allergeni) {
         this.name = name;
@@ -70,6 +81,13 @@ import java.util.List;
         this.calories = calories;
     }
 
+    public Integer getIdMenu() {
+        return idMenu;
+    }
+
+    public void setIdMenu(Integer idMenu) {
+        this.idMenu = idMenu;
+    }
 
     /*
     * Il metodo di stampa deve essere dentro alla classe Classi.Portata

@@ -5,8 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="376170a4-0203-42c8-a5bb-84a8efa9c03c" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Database/Utility.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Database/Utility.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/ristoranteTeam3Java14.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ristoranteTeam3Java14.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Core/Portata.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Core/Portata.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Database/Script.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/Database/Script.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Database/Utility.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Database/DatabaseDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -44,7 +47,7 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;develop&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/michela.delconte/Library/Mobile Documents/com~apple~CloudDocs/Develhope/JAVA/Progetti/ristoranteTeam3Java14&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/michela.delconte/Library/Mobile Documents/com~apple~CloudDocs/Develhope/Progetti/ristoranteTeam3Java14/src/Database&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
@@ -52,6 +55,9 @@
   }
 }</component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/Database" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
     </key>
@@ -91,5 +97,12 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <watches-manager>
+      <configuration name="Application">
+        <watch expression="ps" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>

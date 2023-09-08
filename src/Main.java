@@ -1,11 +1,9 @@
 import Core.Menu;
 import Core.Portata;
-import Database.Utility;
+import Database.DatabaseDao;
 import PortateEntity.*;
 import Enumerati.AllergeniEnum;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.util.List;
 
@@ -102,10 +100,12 @@ public class Main {
         menu.stampaPortate();
 
         // parte di connessione al DB
-        Utility dao = new Utility();
+        DatabaseDao dao = new DatabaseDao();
 
         try {
-            dao.insertMenu(menu);
+            Integer menu1Id = dao.insertMenuAndGetMenuId(menu);
+            acquaFrizzante.setIdMenu(menu1Id);
+            dao.insertPortata(acquaFrizzante);
         }catch (SQLException e) {
             throw new RuntimeException(e);
         }
