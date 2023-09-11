@@ -1,6 +1,8 @@
 import Core.Menu;
 import Core.Portata;
 import Database.DatabaseDao;
+import Database.MenuDao;
+import Database.PortataDao;
 import PortateEntity.*;
 import Enumerati.AllergeniEnum;
 
@@ -100,12 +102,13 @@ public class Main {
         menu.stampaPortate();
 
         // parte di connessione al DB
-        DatabaseDao dao = new DatabaseDao();
+        MenuDao menuDao = new MenuDao();
+        PortataDao portataDao = new PortataDao();
 
         try {
-            Integer menu1Id = dao.insertMenuAndGetMenuId(menu);
-            acquaFrizzante.setIdMenu(menu1Id);
-            dao.insertPortata(acquaFrizzante);
+            Integer menu1Id = menuDao.insertMenuAndGetMenuId(menu);
+            polentinaConcia.setIdMenu(menu1Id);
+            portataDao.insertPortata(polentinaConcia);
         }catch (SQLException e) {
             throw new RuntimeException(e);
         }

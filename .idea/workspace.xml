@@ -5,11 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="376170a4-0203-42c8-a5bb-84a8efa9c03c" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/ristoranteTeam3Java14.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ristoranteTeam3Java14.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Database/MenuDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Database/PortataDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Core/Portata.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Core/Portata.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Database/Script.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/Database/Script.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Database/Utility.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Database/DatabaseDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Database/DatabaseDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Database/DatabaseDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -42,18 +41,18 @@
     <option name="showLibraryContents" value="true" />
     <option name="showScratchesAndConsoles" value="false" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;develop&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/michela.delconte/Library/Mobile Documents/com~apple~CloudDocs/Develhope/Progetti/ristoranteTeam3Java14/src/Database&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.externalTools&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "develop",
+    "last_opened_file_path": "/Users/michela.delconte/Library/Mobile Documents/com~apple~CloudDocs/Develhope/Progetti/ristoranteTeam3Java14/src/Database",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.externalTools"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/Database" />
