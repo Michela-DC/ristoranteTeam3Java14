@@ -52,7 +52,7 @@ public class Menu {
      */
     public void stampaPortate() {
         System.out.println(title + "\n"+description+"\n" );
-        stampaTitoloEInfoPortata("ANTIPASTI", Antipasti.class);
+        stampaTitoloEInfoPortata("ANTIPASTI", Antipasto.class);
         stampaTitoloEInfoPortata("PRIMI PIATTI", PrimoPiatto.class);
         stampaTitoloEInfoPortata("SECONDI PIATTI", SecondoPiatto.class);
         stampaTitoloEInfoPortata("CONTORNI", Contorno.class);

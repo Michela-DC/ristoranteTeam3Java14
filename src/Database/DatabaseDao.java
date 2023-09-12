@@ -20,10 +20,8 @@ public class DatabaseDao {
     private static final String USER = properties.getProperty("db_user");
     private static final String PASSWORD = properties.getProperty("db_password");
 
-    private static Connection dbConnection = null;
 
     public Connection getConnetion() throws SQLException {
-        dbConnection = DriverManager.getConnection(DB_URL, USER, PASSWORD);
-        return dbConnection;
+        return DriverManager.getConnection(DB_URL, USER, PASSWORD);
     }
 }

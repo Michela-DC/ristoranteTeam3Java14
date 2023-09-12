@@ -22,7 +22,7 @@ public class MenuDao {
             generatedKey = rs.getInt(1);
         }
 
-        System.out.println("Inserted record's ID: " + generatedKey);
+        System.out.println("Inserted Menu record's ID: " + generatedKey);
 
         dbConnection.close();
 

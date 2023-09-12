@@ -6,12 +6,21 @@ import Enumerati.ColorEnum;
 
 import java.util.List;
 
-public class Antipasti extends Portata {
+public class Antipasto extends Portata {
     private boolean isProduzionePropria;
+    private Integer idPortata;
+    private Integer idMenu;
 
-    public Antipasti(String name, double price, String description, Integer calories, Boolean isProduzionePropria, List<AllergeniEnum> allergeni) {
+    public Antipasto(String name, double price, String description, Integer calories, Boolean isProduzionePropria, List<AllergeniEnum> allergeni) {
         super(name, price, description, calories, allergeni);
         this.isProduzionePropria = isProduzionePropria;
+    }
+
+    public Antipasto(String name, double price, String description, Integer calories, Boolean isProduzionePropria, List<AllergeniEnum> allergeni, Integer idPortata, Integer idMenu) {
+        super(name, price, description, calories, allergeni);
+        this.isProduzionePropria = isProduzionePropria;
+        this.idPortata = idPortata;
+        this.idMenu = idMenu;
     }
 
     public boolean isProduzionePropria() {
@@ -22,13 +31,19 @@ public class Antipasti extends Portata {
         isProduzionePropria = produzionePropria;
     }
 
+    public Integer getIdPortata() {
+        return idPortata;
+    }
+
+    public void setIdPortata(Integer idPortata) {
+        this.idPortata = idPortata;
+    }
+
     @Override
     public void printInfoPortata() {
         super.printInfoPortata();
         if(isProduzionePropria){
             System.out.println(ColorEnum.CYAN.getAnsiCode() + "Prodotto di nostra produzione");
         } else System.out.println(ColorEnum.CYAN.getAnsiCode() + "Prodotto non di nostra produzione");
-
-
     }
 }
