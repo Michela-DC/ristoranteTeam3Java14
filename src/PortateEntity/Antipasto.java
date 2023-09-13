@@ -8,19 +8,15 @@ import java.util.List;
 
 public class Antipasto extends Portata {
     private boolean isProduzionePropria;
-    private Integer idPortata;
-    private Integer idMenu;
 
-    public Antipasto(String name, double price, String description, Integer calories, Boolean isProduzionePropria, List<AllergeniEnum> allergeni) {
-        super(name, price, description, calories, allergeni);
+    public Antipasto(String name, Double price, String description, Integer calories, List<AllergeniEnum> allergeni, Integer idPortata, Integer idMenu, Boolean isProduzionePropria) {
+        super(name, price, description, calories, allergeni, idPortata, idMenu);
         this.isProduzionePropria = isProduzionePropria;
     }
 
-    public Antipasto(String name, double price, String description, Integer calories, Boolean isProduzionePropria, List<AllergeniEnum> allergeni, Integer idPortata, Integer idMenu) {
+    public Antipasto(String name, Double price, String description, Integer calories, List<AllergeniEnum> allergeni, Boolean isProduzionePropria) {
         super(name, price, description, calories, allergeni);
         this.isProduzionePropria = isProduzionePropria;
-        this.idPortata = idPortata;
-        this.idMenu = idMenu;
     }
 
     public boolean isProduzionePropria() {
@@ -29,14 +25,6 @@ public class Antipasto extends Portata {
 
     public void setProduzionePropria(boolean produzionePropria) {
         isProduzionePropria = produzionePropria;
-    }
-
-    public Integer getIdPortata() {
-        return idPortata;
-    }
-
-    public void setIdPortata(Integer idPortata) {
-        this.idPortata = idPortata;
     }
 
     @Override

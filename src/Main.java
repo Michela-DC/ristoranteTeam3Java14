@@ -15,11 +15,11 @@ public class Main {
         
         // List.of() lo usiamo per creare una lista di allergeni che prendiamo da Enumerati.AllergeniEnum
         //Antipasti
-        Portata polentinaConcia = new Antipasto("Polentina Concia" , 6.50 , "Polenta morbida al burro e fontina con sbriciolata di prosciutto crudo essicato", 800, true,  List.of(AllergeniEnum.LATTE));
-        Portata tartareDiManzo = new Antipasto("Tartare di manzo" , 10.50 , "Con cremoso al pecorino, funghi pleius scottati e polvere di porcino essiccato", 700, false, List.of(AllergeniEnum.LATTE));
-        Portata iNostriSpiedini = new Antipasto("I nostri spiedini" , 9.50 , "Spiedini di manzo con crema delicata all’aglio e mentuccia, spiedini di maiale , spiedini di vitello con salsa teriyaki e granella di pistacchio", 650, true, List.of());
-        Portata bresaolaRucolaParmigiano = new Antipasto("Bresaola con rucola e parmigiano" , 8.50 , "Sottili fette di carne di manzo essiccata servite con rucola e scaglie di parmigiano", 450, true, List.of(AllergeniEnum.LATTE));
-        Portata salumiMisti = new Antipasto("Tagliere di salumi misti" , 12.50 , "Un assortimento di salumi come prosciutto, salame, coppa, bresaola e mortadella", 500, false, List.of());
+        Portata polentinaConcia = new Antipasto("Polentina Concia" , 6.50 , "Polenta morbida al burro e fontina con sbriciolata di prosciutto crudo essicato", 800, List.of(AllergeniEnum.LATTE), true);
+        Portata tartareDiManzo = new Antipasto("Tartare di manzo" , 10.50 , "Con cremoso al pecorino, funghi pleius scottati e polvere di porcino essiccato", 700, List.of(AllergeniEnum.LATTE), false);
+        Portata iNostriSpiedini = new Antipasto("I nostri spiedini" , 9.50 , "Spiedini di manzo con crema delicata all’aglio e mentuccia, spiedini di maiale , spiedini di vitello con salsa teriyaki e granella di pistacchio", 650,  List.of(), true);
+        Portata bresaolaRucolaParmigiano = new Antipasto("Bresaola con rucola e parmigiano" , 8.50 , "Sottili fette di carne di manzo essiccata servite con rucola e scaglie di parmigiano", 450,  List.of(AllergeniEnum.LATTE), true);
+        Portata salumiMisti = new Antipasto("Tagliere di salumi misti" , 12.50 , "Un assortimento di salumi come prosciutto, salame, coppa, bresaola e mortadella", 500, List.of(), false);
 
         menu.aggiungiPortata(polentinaConcia);
         menu.aggiungiPortata(tartareDiManzo);
@@ -28,11 +28,11 @@ public class Main {
         menu.aggiungiPortata(salumiMisti);
 
         //Primi piatti
-        Portata spaghettiAllaCarbonara = new PrimoPiatto("Spaghetti alla carbonara" , 10.50,"Spaghetti conditi con uova, pancetta, pecorino romano e pepe nero", false, 750, List.of(AllergeniEnum.GLUTINE, AllergeniEnum.UOVA));
-        Portata risottoAiFunghiESalsiccia = new PrimoPiatto("Risotto ai funghi e salsiccia" , 12.50,"Risotto cremoso preparato con funghi porcini freschi e parmigiano reggiano",false, 680,  List.of(AllergeniEnum.LATTE));
-        Portata lasagneAlRagu = new PrimoPiatto("Lasagne al ragù" , 12.00,"Strati di pasta all'uovo, ragù di carne, besciamella e formaggio gratinato", true, 700, List.of(AllergeniEnum.GLUTINE)) ;
-        Portata penneAllArrabbiata = new PrimoPiatto("Penne all'arrabbiata" , 9.00,"Penne condite con salsa piccante al pomodoro, aglio, peperoncino e prezzemolo", true, 650, List.of(AllergeniEnum.GLUTINE));
-        Portata pappardelleAlCinghiale = new PrimoPiatto("Pappardelle al cinghiale" , 9.50,"Gnocchi di patate freschi serviti con salsa al basilico, pinoli, parmigiano e olio d'oliva", true, 950, List.of(AllergeniEnum.GLUTINE, AllergeniEnum.LATTE, AllergeniEnum.FRUTTA_A_GUSCIO));
+        Portata spaghettiAllaCarbonara = new PrimoPiatto("Spaghetti alla carbonara" , 10.50,"Spaghetti conditi con uova, pancetta, pecorino romano e pepe nero", 750, List.of(AllergeniEnum.GLUTINE, AllergeniEnum.UOVA), false);
+        Portata risottoAiFunghiESalsiccia = new PrimoPiatto("Risotto ai funghi e salsiccia" , 12.50,"Risotto cremoso preparato con funghi porcini freschi e parmigiano reggiano",680,  List.of(AllergeniEnum.LATTE), false);
+        Portata lasagneAlRagu = new PrimoPiatto("Lasagne al ragù" , 12.00,"Strati di pasta all'uovo, ragù di carne, besciamella e formaggio gratinato", 700, List.of(AllergeniEnum.GLUTINE), true) ;
+        Portata penneAllArrabbiata = new PrimoPiatto("Penne all'arrabbiata" , 9.00,"Penne condite con salsa piccante al pomodoro, aglio, peperoncino e prezzemolo", 650, List.of(AllergeniEnum.GLUTINE), true);
+        Portata pappardelleAlCinghiale = new PrimoPiatto("Pappardelle al cinghiale" , 9.50,"Gnocchi di patate freschi serviti con salsa al basilico, pinoli, parmigiano e olio d'oliva", 950, List.of(AllergeniEnum.GLUTINE, AllergeniEnum.LATTE, AllergeniEnum.FRUTTA_A_GUSCIO), true);
 
         menu.aggiungiPortata(spaghettiAllaCarbonara);
         menu.aggiungiPortata(risottoAiFunghiESalsiccia);
@@ -41,11 +41,11 @@ public class Main {
         menu.aggiungiPortata(pappardelleAlCinghiale);
 
         //Secondi
-        Portata scaloppineAlLimone = new SecondoPiatto("Scaloppine al limone", 12.00, "Fettine di vitello  battute e poi cotte in padella con succo di limone, burro e prezzemolo", "Allevamento biologico", 500, List.of());
-        Portata arrostoDiMaiale = new SecondoPiatto("Arrosto di maiale", 14.00, "Arrosto di delizioso filetto di maialino nero","Allevamento biologico", 550, List.of());
-        Portata bisteccaAllaFiorentina = new SecondoPiatto("Bistecca alla fiorentina", 24.00, "Bistecca di carne marchigiana con taglio da fiorentina", "Allevamento locale", 600, List.of());
-        Portata abbacchioAllaRomana = new SecondoPiatto("Abbacchio alla romana", 16.00, "Carne di agnello da latte marinata con aglio, rosmarino, pepe nero e succo di limone cotta lentamente in padella", "Allevamento biologico", 650, List.of());
-        Portata polloAllaCacciatora = new SecondoPiatto("Pollo alla cacciatora", 14.00, "Pollo allevato a terra con  contorno di patate al forno", "Allevamento biologico", 600, List.of());
+        Portata scaloppineAlLimone = new SecondoPiatto("Scaloppine al limone", 12.00, "Fettine di vitello  battute e poi cotte in padella con succo di limone, burro e prezzemolo", 500, List.of(), "Allevamento biologico");
+        Portata arrostoDiMaiale = new SecondoPiatto("Arrosto di maiale", 14.00, "Arrosto di delizioso filetto di maialino nero", 550, List.of(), "Allevamento biologico");
+        Portata bisteccaAllaFiorentina = new SecondoPiatto("Bistecca alla fiorentina", 24.00, "Bistecca di carne marchigiana con taglio da fiorentina", 600, List.of(), "Allevamento locale");
+        Portata abbacchioAllaRomana = new SecondoPiatto("Abbacchio alla romana", 16.00, "Carne di agnello da latte marinata con aglio, rosmarino, pepe nero e succo di limone cotta lentamente in padella", 650, List.of(), "Allevamento biologico");
+        Portata polloAllaCacciatora = new SecondoPiatto("Pollo alla cacciatora", 14.00, "Pollo allevato a terra con  contorno di patate al forno", 600, List.of(), "Allevamento biologico");
 
         menu.aggiungiPortata(scaloppineAlLimone);
         menu.aggiungiPortata(arrostoDiMaiale);
@@ -77,15 +77,15 @@ public class Main {
         menu.aggiungiPortata(cheesecake);
 
         //Bevande
-        Portata acquaNaturale = new Bevanda("Acqua naturale", 3.00, "1l", null, 0, List.of());
-        Portata acquaFrizzante = new Bevanda("Acqua frizzante", 3.00, "1l", null, 0, List.of());
-        Portata cocaCola = new Bevanda("Coca Cola", 3.5, "lattina 33cl", null, 120, List.of());
-        Portata sprite = new Bevanda("Sprite", 3.5, "lattina 33cl", null, 135, List.of());
-        Portata fanta = new Bevanda("Fanta", 3.5, "lattina 33cl", null, 140,  List.of());
-        Portata theLimone = new Bevanda("Thé al limone", 3.5, "lattina 33cl", null, 85, List.of());
-        Portata birraPiccola = new Bevanda("Birra piccola alla spina", 4.00, "Franziskainer 25cl", 5.00, 120, List.of());
-        Portata birraMedia = new Bevanda("Birra media alla spina", 6.00, "Franziskainer 40cl", 5.00, 100 , List.of());
-        Portata caliceVino = new Bevanda("Calice di vino", 5.50, "Montepulciano D'Abruzzo 2018", 12.00, 110,  List.of());
+        Portata acquaNaturale = new Bevanda("Acqua naturale", 3.00, "1l", 0, List.of(), null);
+        Portata acquaFrizzante = new Bevanda("Acqua frizzante", 3.00, "1l", 0, List.of(), null);
+        Portata cocaCola = new Bevanda("Coca Cola", 3.5, "lattina 33cl", 120, List.of(), null);
+        Portata sprite = new Bevanda("Sprite", 3.5, "lattina 33cl", 135, List.of(), null);
+        Portata fanta = new Bevanda("Fanta", 3.5, "lattina 33cl", 140,  List.of(), null);
+        Portata theLimone = new Bevanda("Thé al limone", 3.5, "lattina 33cl", 85, List.of(), null);
+        Portata birraPiccola = new Bevanda("Birra piccola alla spina", 4.00, "Franziskainer 25cl", 120, List.of(), 5.00);
+        Portata birraMedia = new Bevanda("Birra media alla spina", 6.00, "Franziskainer 40cl", 100 , List.of(), 5.00);
+        Portata caliceVino = new Bevanda("Calice di vino", 5.50, "Montepulciano D'Abruzzo 2018", 110,  List.of(), 12.00);
 
         menu.aggiungiPortata(acquaNaturale);
         menu.aggiungiPortata(acquaFrizzante);
@@ -108,7 +108,6 @@ public class Main {
             Integer menu1Id = menuDao.insertMenuAndGetMenuId(menu);
 
             //CONTROLLARE INSERIMENTO
-            
             polentinaConcia.setIdMenu(menu1Id);
             Integer idPortataPolentinaConcia = portataDao.insertPortataAndGetPortataId(polentinaConcia);
             polentinaConcia.setIdPortata(idPortataPolentinaConcia);

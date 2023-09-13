@@ -1,27 +1,31 @@
 package Core;
 
+import Database.PortataDao;
 import PortateEntity.Bevanda;
 import Enumerati.AllergeniEnum;
 import Enumerati.ColorEnum;
 
+import java.sql.SQLException;
 import java.util.List;
 //classe padre
-    public class Portata {
+public class Portata {
     public static final String ALLERGENI = "Allergeni:";
     private String name;
     private Double price;
     private String description;
     private Integer calories;
-    private Integer idMenu;
     private List<AllergeniEnum> allergeni;
+    private Integer idPortata;
+    private Integer idMenu;
 
-    public Portata(String name, Double price, String description, Integer calories, Integer idMenu, List<AllergeniEnum> allergeni) {
+    public Portata(String name, Double price, String description, Integer calories, List<AllergeniEnum> allergeni, Integer idPortata, Integer idMenu) {
         this.name = name;
         this.price = price;
         this.description = description;
         this.calories = calories;
-        this.idMenu = idMenu;
         this.allergeni = allergeni;
+        this.idPortata = idPortata;
+        this.idMenu = idMenu;
     }
 
     public Portata(String name, Double price, String description, Integer calories, List<AllergeniEnum> allergeni) {
@@ -30,14 +34,6 @@ import java.util.List;
         this.description = description;
         this.calories = calories;
         this.allergeni = allergeni;
-    }
-
-    public Integer getIdPortata() {
-        return idPortata;
-    }
-
-    public void setIdPortata(Integer idPortata) {
-        this.idPortata = idPortata;
     }
 
     public List<AllergeniEnum> getAllergeni() {
@@ -78,6 +74,14 @@ import java.util.List;
 
     public void setCalories(Integer calories) {
         this.calories = calories;
+    }
+
+    public Integer getIdPortata() {
+        return idPortata;
+    }
+
+    public void setIdPortata(Integer idPortata) {
+        this.idPortata = idPortata;
     }
 
     public Integer getIdMenu() {

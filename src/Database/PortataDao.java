@@ -31,10 +31,12 @@ public class PortataDao {
         return generatedKey;
     }
 
-    public void insertAntipasto(Antipasto antipasto) throws SQLException {
+    public void insertAntipasto(Portata portataAntipasto) throws SQLException {
         DatabaseDao dbDao = new DatabaseDao();
         Connection dbConnection = dbDao.getConnetion();
         Statement statement = dbConnection.createStatement();
+
+        Antipasto antipasto = (Antipasto) portataAntipasto;
 
         Integer isProduzionePropria = antipasto.isProduzionePropria() ? 1 : 0;
 
@@ -48,7 +50,7 @@ public class PortataDao {
         dbConnection.close();
     }
 
- public void insertSecondo(SecondoPiatto secondoPiatto) throws SQLException {
+    public void insertSecondo(SecondoPiatto secondoPiatto) throws SQLException {
         DatabaseDao dbDao = new DatabaseDao();
         Connection dbConnection = dbDao.getConnetion();
         Statement statement = dbConnection.createStatement();
@@ -149,10 +151,6 @@ public class PortataDao {
 
 
     }
-
-
-
-
 
 
 }
