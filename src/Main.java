@@ -15,7 +15,7 @@ public class Main {
         
         // List.of() lo usiamo per creare una lista di allergeni che prendiamo da Enumerati.AllergeniEnum
         //Antipasti
-        Antipasto polentinaConcia = new Antipasto("Polentina Concia" , 6.50 , "Polenta morbida al burro e fontina con sbriciolata di prosciutto crudo essicato", 800, true,  List.of(AllergeniEnum.LATTE));
+        Portata polentinaConcia = new Antipasto("Polentina Concia" , 6.50 , "Polenta morbida al burro e fontina con sbriciolata di prosciutto crudo essicato", 800, true,  List.of(AllergeniEnum.LATTE));
         Portata tartareDiManzo = new Antipasto("Tartare di manzo" , 10.50 , "Con cremoso al pecorino, funghi pleius scottati e polvere di porcino essiccato", 700, false, List.of(AllergeniEnum.LATTE));
         Portata iNostriSpiedini = new Antipasto("I nostri spiedini" , 9.50 , "Spiedini di manzo con crema delicata all’aglio e mentuccia, spiedini di maiale , spiedini di vitello con salsa teriyaki e granella di pistacchio", 650, true, List.of());
         Portata bresaolaRucolaParmigiano = new Antipasto("Bresaola con rucola e parmigiano" , 8.50 , "Sottili fette di carne di manzo essiccata servite con rucola e scaglie di parmigiano", 450, true, List.of(AllergeniEnum.LATTE));
@@ -104,16 +104,20 @@ public class Main {
         MenuDao menuDao = new MenuDao();
         PortataDao portataDao = new PortataDao();
 
-//        try {
-//            Integer menu1Id = menuDao.insertMenuAndGetMenuId(menu);
-//            polentinaConcia.setIdMenu(menu1Id);
-//            Integer idPortataPolentina = portataDao.insertPortataAndGetPortataId(polentinaConcia);
-//            polentinaConcia.setIdPortata(idPortataPolentina);
-//            portataDao.insertAntipasto(polentinaConcia);
-//
-//        }catch (SQLException e) {
-//            throw new RuntimeException(e);
-//        }
+        try {
+            Integer menu1Id = menuDao.insertMenuAndGetMenuId(menu);
+
+            //CONTROLLARE INSERIMENTO
+            
+            polentinaConcia.setIdMenu(menu1Id);
+            Integer idPortataPolentinaConcia = portataDao.insertPortataAndGetPortataId(polentinaConcia);
+            polentinaConcia.setIdPortata(idPortataPolentinaConcia);
+            portataDao.insertAntipasto(polentinaConcia);
+
+
+        }catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
     }
 }
 

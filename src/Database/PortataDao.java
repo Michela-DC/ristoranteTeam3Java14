@@ -130,6 +130,27 @@ public class PortataDao {
 
     }
 
+    public void insertPrimo(PrimoPiatto primoPiatto) throws SQLException {
+        DatabaseDao dbDao = new DatabaseDao();
+        Connection dbConnection = dbDao.getConnetion();
+        Statement statement = dbConnection.createStatement();
+
+       Boolean isStagionale = primoPiatto.getStagionale();
+
+
+        String insertQueryMenu = "INSERT INTO contorno (is_stagionale,idPortata, idMenu) " +
+                "VALUES (' " + isStagionale + " ', '" + primoPiatto.getIdPortata() + "', '" + primoPiatto.getIdMenu() + "')";
+
+        statement.executeUpdate(insertQueryMenu);
+
+        System.out.println("Inserito contorno record's name: " + primoPiatto.getName());
+
+        dbConnection.close();
+
+
+    }
+
+
 
 
 

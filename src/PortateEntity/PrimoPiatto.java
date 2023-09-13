@@ -18,7 +18,30 @@ private Boolean isStagionale;
         this.isStagionale = isStagionale;
     }
 
+    public PrimoPiatto(String name, Double price, String description, Integer calories, List<AllergeniEnum> allergeni, Integer idMenu, Boolean isStagionale, Integer idPortata, Integer idMenu1) {
+        super(name, price, description, calories, allergeni, idMenu);
+        this.isStagionale = isStagionale;
+        this.idPortata = idPortata;
+        this.idMenu = idMenu1;
+    }
 
+    public Integer getIdPortata() {
+        return idPortata;
+    }
+
+    public void setIdPortata(Integer idPortata) {
+        this.idPortata = idPortata;
+    }
+
+    @Override
+    public Integer getIdMenu() {
+        return idMenu;
+    }
+
+    @Override
+    public void setIdMenu(Integer idMenu) {
+        this.idMenu = idMenu;
+    }
 
     public Boolean getStagionale() {
         return isStagionale;

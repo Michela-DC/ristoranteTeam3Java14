@@ -11,26 +11,17 @@ import java.util.List;
     private String name;
     private Double price;
     private String description;
-
     private Integer calories;
-
     private Integer idMenu;
-
-    /*
-    *
-    * Nella portata la lista di allergeni deve essere
-    * di enum e fare listaAllergeni.getDescrizione()
-    * per fare la stampa degli allergeni
-    * */
     private List<AllergeniEnum> allergeni;
 
-    public Portata(String name, Double price, String description, Integer calories, List<AllergeniEnum> allergeni, Integer idMenu) {
+    public Portata(String name, Double price, String description, Integer calories, Integer idMenu, List<AllergeniEnum> allergeni) {
         this.name = name;
         this.price = price;
         this.description = description;
         this.calories = calories;
-        this.allergeni = allergeni;
         this.idMenu = idMenu;
+        this.allergeni = allergeni;
     }
 
     public Portata(String name, Double price, String description, Integer calories, List<AllergeniEnum> allergeni) {
@@ -39,6 +30,14 @@ import java.util.List;
         this.description = description;
         this.calories = calories;
         this.allergeni = allergeni;
+    }
+
+    public Integer getIdPortata() {
+        return idPortata;
+    }
+
+    public void setIdPortata(Integer idPortata) {
+        this.idPortata = idPortata;
     }
 
     public List<AllergeniEnum> getAllergeni() {
