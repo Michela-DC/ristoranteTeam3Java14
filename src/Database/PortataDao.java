@@ -1,9 +1,7 @@
 package Database;
 
-import Core.Menu;
 import Core.Portata;
-import PortateEntity.Antipasto;
-import PortateEntity.SecondoPiatto;
+import PortateEntity.*;
 
 import java.sql.*;
 
@@ -38,7 +36,7 @@ public class PortataDao {
         Connection dbConnection = dbDao.getConnetion();
         Statement statement = dbConnection.createStatement();
 
-        int isProduzionePropria = antipasto.isProduzionePropria() ? 1 : 0;
+        Integer isProduzionePropria = antipasto.isProduzionePropria() ? 1 : 0;
 
         String insertQueryMenu = "INSERT INTO antipasto (is_produzione_propria, idPortata, idMenu) " +
                                  "VALUES ('" + isProduzionePropria + "', '" + antipasto.getIdPortata() + "', '" + antipasto.getIdMenu() + "')";
@@ -65,6 +63,69 @@ public class PortataDao {
      System.out.println("Inserito secondo record's name: " + secondoPiatto.getName());
 
      dbConnection.close();
+
+
+    }
+
+
+
+    public void insertBevanda(Bevanda bevanda) throws SQLException {
+        DatabaseDao dbDao = new DatabaseDao();
+        Connection dbConnection = dbDao.getConnetion();
+        Statement statement = dbConnection.createStatement();
+
+        Double tassoAlcolico = bevanda.getTassoAlcolico();
+
+        String insertQueryMenu = "INSERT INTO bevanda (tasso_alcolico, idPortata, idMenu) " +
+                "VALUES (' " + tassoAlcolico + " ', '" + bevanda.getIdPortata() + "', '" + bevanda.getIdMenu() + "')";
+
+        statement.executeUpdate(insertQueryMenu);
+
+        System.out.println("Inserito bevanda record's name: " + bevanda.getName());
+
+        dbConnection.close();
+
+
+    }
+
+
+    public void insertContorno(Contorno contorno) throws SQLException {
+        DatabaseDao dbDao = new DatabaseDao();
+        Connection dbConnection = dbDao.getConnetion();
+        Statement statement = dbConnection.createStatement();
+
+        Boolean OlioAlPeperoncino = contorno.getOlioAlPeperoncino();
+        String note = contorno.getNote();
+
+        String insertQueryMenu = "INSERT INTO contorno (olio_al_peperoncino, note,idPortata, idMenu) " +
+                "VALUES (' " + OlioAlPeperoncino + " ',' " + note + " ', '" + contorno.getIdPortata() + "', '" + contorno.getIdMenu() + "')";
+
+        statement.executeUpdate(insertQueryMenu);
+
+        System.out.println("Inserito contorno record's name: " + contorno.getName());
+
+        dbConnection.close();
+
+
+    }
+
+    public void insertDessert(Dessert dessert) throws SQLException {
+        DatabaseDao dbDao = new DatabaseDao();
+        Connection dbConnection = dbDao.getConnetion();
+        Statement statement = dbConnection.createStatement();
+
+        String semifreddo = dessert.getNomePasticceria();
+        Double percentualeZuccheri = dessert.getPercentualeZuccheri();
+
+
+        String insertQueryMenu = "INSERT INTO contorno (semifreddo,percentuale_zuccheri,idPortata, idMenu) " +
+                "VALUES (' " + semifreddo + " ',' " + percentualeZuccheri + " ', '" + dessert.getIdPortata() + "', '" + dessert.getIdMenu() + "')";
+
+        statement.executeUpdate(insertQueryMenu);
+
+        System.out.println("Inserito contorno record's name: " + dessert.getName());
+
+        dbConnection.close();
 
 
     }

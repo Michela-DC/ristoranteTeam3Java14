@@ -7,8 +7,25 @@ import Enumerati.ColorEnum;
 import java.util.List;
 
 public class Dessert extends Portata {
-    private String semiFreddo;
+    private String nomePasticceria;
+    private Integer idPortata;
+    private Integer idMenu;
+    private Double percentualeZuccheri;
 
+
+    public Dessert(String name, double price, String description, Integer calories, List<AllergeniEnum> allergeni, String nomePasticceria, Double percentualeZuccheri) {
+        super(name, price, description, calories, allergeni);
+        this.nomePasticceria = nomePasticceria;
+        this.percentualeZuccheri=percentualeZuccheri;
+    }
+
+    public Dessert(String name, Double price, String description, Integer calories, List<AllergeniEnum> allergeni, Integer idMenu, String nomePasticceria, Integer idPortata, Integer idMenu1, Double percentualeZuccheri) {
+        super(name, price, description, calories, allergeni, idMenu);
+        this.nomePasticceria = nomePasticceria;
+        this.idPortata = idPortata;
+        this.idMenu = idMenu1;
+        this.percentualeZuccheri = percentualeZuccheri;
+    }
 
     public double getPercentualeZuccheri() {
         return percentualeZuccheri;
@@ -18,24 +35,30 @@ public class Dessert extends Portata {
         this.percentualeZuccheri = percentualeZuccheri;
     }
 
-    private double percentualeZuccheri;
-
-private List<Dessert> desserts;
-
-
-    public Dessert(String name, double price, String description, Integer calories, List<AllergeniEnum> allergeni) {
-        super(name, price, description, calories, allergeni);
-        this.semiFreddo=semiFreddo;
-        this.percentualeZuccheri=percentualeZuccheri;
+    public Integer getIdPortata() {
+        return idPortata;
     }
 
-
-    public String getSemiFreddo() {
-        return semiFreddo;
+    public void setIdPortata(Integer idPortata) {
+        this.idPortata = idPortata;
     }
 
-    public void setSemiFreddo(String semiFreddo) {
-        this.semiFreddo = semiFreddo;
+    @Override
+    public Integer getIdMenu() {
+        return idMenu;
+    }
+
+    @Override
+    public void setIdMenu(Integer idMenu) {
+        this.idMenu = idMenu;
+    }
+
+    public String getNomePasticceria() {
+        return nomePasticceria;
+    }
+
+    public void setNomePasticceria(String nomePasticceria) {
+        this.nomePasticceria = nomePasticceria;
     }
 
 

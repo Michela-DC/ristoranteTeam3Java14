@@ -65,10 +65,10 @@ public class Main {
         menu.aggiungiPortata(caponata);
 
         //Dessert
-        Portata sorbettoAlLimone = new Dessert("Sorbetto al limone", 5.00, "Coppa di sorbetto con limoni freschi di Siracusa igp", 250, List.of(AllergeniEnum.LATTE, AllergeniEnum.UOVA));
-        Portata tiramisu= new Dessert("Tiramisù", 6.00, "Fetta di tiramisù con mascarpone, savoiardi,caffè e amaretto di Saronno", 350, List.of(AllergeniEnum.LATTE,AllergeniEnum.UOVA));
-        Portata pannaCotta = new Dessert("Panna Cotta", 4.50, "Panna cotta con succo di fragole fresche frullate", 400, List.of());
-        Portata cheesecake = new Dessert("Cheescake al Pistacchio", 8.90, "Fetta di Cheescake al pistacchio di Bronte con base di biscotti", 650, List.of(AllergeniEnum.LATTE,AllergeniEnum.UOVA));
+        Portata sorbettoAlLimone = new Dessert("Sorbetto al limone", 5.00, "Coppa di sorbetto con limoni freschi di Siracusa igp", 250, List.of(AllergeniEnum.LATTE, AllergeniEnum.UOVA),"Il Principe",20.00);
+        Portata tiramisu= new Dessert("Tiramisù", 6.00, "Fetta di tiramisù con mascarpone, savoiardi,caffè e amaretto di Saronno", 350, List.of(AllergeniEnum.LATTE,AllergeniEnum.UOVA),"Sal De Riso",25.00);
+        Portata pannaCotta = new Dessert("Panna Cotta", 4.50, "Panna cotta con succo di fragole fresche frullate", 400, List.of(),"La Dalmasso",10.00);
+        Portata cheesecake = new Dessert("Cheescake al Pistacchio", 8.90, "Fetta di Cheescake al pistacchio di Bronte con base di biscotti", 650, List.of(AllergeniEnum.LATTE,AllergeniEnum.UOVA),"Maison Manilia",5.00);
 
 
         menu.aggiungiPortata(sorbettoAlLimone);
@@ -104,16 +104,16 @@ public class Main {
         MenuDao menuDao = new MenuDao();
         PortataDao portataDao = new PortataDao();
 
-        try {
-            Integer menu1Id = menuDao.insertMenuAndGetMenuId(menu);
-            polentinaConcia.setIdMenu(menu1Id);
-            Integer idPortataPolentina = portataDao.insertPortataAndGetPortataId(polentinaConcia);
-            polentinaConcia.setIdPortata(idPortataPolentina);
-            portataDao.insertAntipasto(polentinaConcia);
-
-        }catch (SQLException e) {
-            throw new RuntimeException(e);
-        }
+//        try {
+//            Integer menu1Id = menuDao.insertMenuAndGetMenuId(menu);
+//            polentinaConcia.setIdMenu(menu1Id);
+//            Integer idPortataPolentina = portataDao.insertPortataAndGetPortataId(polentinaConcia);
+//            polentinaConcia.setIdPortata(idPortataPolentina);
+//            portataDao.insertAntipasto(polentinaConcia);
+//
+//        }catch (SQLException e) {
+//            throw new RuntimeException(e);
+//        }
     }
 }
 

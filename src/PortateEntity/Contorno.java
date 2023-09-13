@@ -9,11 +9,42 @@ import java.util.List;
 public class Contorno extends Portata {
     private Boolean olioAlPeperoncino;
     private String note;
+    private Integer idPortata;
+    private Integer idMenu;
+
 
     public Contorno(String name, double price, String description, Integer calories, List<AllergeniEnum> allergeni, Boolean olioAlPeperoncino, String note) {
         super(name, price, description, calories, allergeni);
         this.olioAlPeperoncino = olioAlPeperoncino;
         this.note = note;
+    }
+
+    public Contorno(String name, Double price, String description, Integer calories, List<AllergeniEnum> allergeni, Integer idMenu, Boolean olioAlPeperoncino, String note, Integer idPortata, Integer idMenu1) {
+        super(name, price, description, calories, allergeni, idMenu);
+        this.olioAlPeperoncino = olioAlPeperoncino;
+        this.note = note;
+        this.idPortata = idPortata;
+        this.idMenu = idMenu1;
+    }
+
+
+
+    public Integer getIdPortata() {
+        return idPortata;
+    }
+
+    public void setIdPortata(Integer idPortata) {
+        this.idPortata = idPortata;
+    }
+
+    @Override
+    public Integer getIdMenu() {
+        return idMenu;
+    }
+
+    @Override
+    public void setIdMenu(Integer idMenu) {
+        this.idMenu = idMenu;
     }
 
     public Boolean getOlioAlPeperoncino() {

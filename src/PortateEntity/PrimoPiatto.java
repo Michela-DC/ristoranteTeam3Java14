@@ -9,10 +9,16 @@ import java.util.List;
 public class PrimoPiatto extends Portata {
 
 private Boolean isStagionale;
+    private Integer idPortata;
+    private Integer idMenu;
+
+
     public PrimoPiatto(String name, Double price, String description, Boolean isStagionale, Integer calories, List<AllergeniEnum> allergeni) {
         super(name, price, description, calories, allergeni);
         this.isStagionale = isStagionale;
     }
+
+
 
     public Boolean getStagionale() {
         return isStagionale;

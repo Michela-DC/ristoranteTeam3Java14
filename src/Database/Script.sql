@@ -105,7 +105,7 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `ristoranteJava`.`Dessert` (
   `idDessert` INT NOT NULL AUTO_INCREMENT,
-  `semifreddo` VARCHAR(45) NULL,
+  `nome_pasticceria` VARCHAR(45) NULL,
   `percentuale_zuccheri` TINYINT NULL,
   `idPortata` INT NOT NULL,
   `idMenu` INT NOT NULL,
