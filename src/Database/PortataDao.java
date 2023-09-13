@@ -3,6 +3,7 @@ package Database;
 import Core.Menu;
 import Core.Portata;
 import PortateEntity.Antipasto;
+import PortateEntity.SecondoPiatto;
 
 import java.sql.*;
 
@@ -48,4 +49,28 @@ public class PortataDao {
 
         dbConnection.close();
     }
+
+ public void insertSecondo(SecondoPiatto secondoPiatto) throws SQLException {
+        DatabaseDao dbDao = new DatabaseDao();
+        Connection dbConnection = dbDao.getConnetion();
+        Statement statement = dbConnection.createStatement();
+
+        String origineDellaCarne = secondoPiatto.getOrigineDellaCarne();
+
+        String insertQueryMenu = "INSERT INTO secondo (origine_della_carne, idPortata, idMenu) " +
+                "VALUES (' " + origineDellaCarne + " ', '" + secondoPiatto.getIdPortata() + "', '" + secondoPiatto.getIdMenu() + "')";
+
+     statement.executeUpdate(insertQueryMenu);
+
+     System.out.println("Inserito secondo record's name: " + secondoPiatto.getName());
+
+     dbConnection.close();
+
+
+    }
+
+
+
+
+
 }
