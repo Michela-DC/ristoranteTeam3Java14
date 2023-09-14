@@ -31,6 +31,8 @@ public class PortataDao {
         return generatedKey;
     }
 
+    //TODO: fare DAO per ogni entity ovvero anche per ogni sottoclasse
+
     public void insertAntipasto(Portata portataAntipasto) throws SQLException {
         DatabaseDao dbDao = new DatabaseDao();
         Connection dbConnection = dbDao.getConnetion();

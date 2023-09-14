@@ -6,15 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="376170a4-0203-42c8-a5bb-84a8efa9c03c" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Core/Portata.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Core/Portata.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Database/PortataDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Database/PortataDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PortateEntity/Antipasto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PortateEntity/Antipasto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PortateEntity/Bevanda.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PortateEntity/Bevanda.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PortateEntity/Contorno.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PortateEntity/Contorno.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PortateEntity/Dessert.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PortateEntity/Dessert.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PortateEntity/PrimoPiatto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PortateEntity/PrimoPiatto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PortateEntity/SecondoPiatto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PortateEntity/SecondoPiatto.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
